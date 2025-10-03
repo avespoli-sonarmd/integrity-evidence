@@ -1,0 +1,717 @@
+Anthonys-MacBook-Pro:~ root# strings /System/Library/KernelCollections/BootKernelExtensions.kc | grep -A2 -B2 teamid
+Anthonys-MacBook-Pro:~ root# defaults read /System/Volumes/Preboot/Cryptexes/OS/System/Library/CoreServices/SystemVersion ProductBuildVersion
+25A354
+Anthonys-MacBook-Pro:~ root# sw_vers -buildVersion
+25A354
+Anthonys-MacBook-Pro:~ root# find /System/Volumes/Preboot/Cryptexes -type f -perm +111 -exec sudo codesign -v {} \; -exec echo {} \; 2>&1 | grep -v "valid on disk"
+/System/Volumes/Preboot/Cryptexes/App/usr/bin/safaridriver
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariHistoryServiceAgent
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/webpushd
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariNotificationAgent
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariLaunchAgent
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/webinspectord
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/com.apple.Safari.History
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/AuthenticationServicesAgent
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/PasswordBreachAgent
+/System/Volumes/Preboot/Cryptexes/App/System/Library/Assistant/Plugins/Safari.assistantBundle/Contents/MacOS/Safari: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/PasswordsSettingsExtension.appex/Contents/MacOS/PasswordsSettingsExtension
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/SafariBookmarksSyncAgent: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/MacOS/Web App: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/XPCServices/com.apple.Safari.SandboxBroker.xpc/Contents/MacOS/com.apple.Safari.SandboxBroker: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/XPCServices/com.apple.Safari.ContentBlockerLoader.xpc/Contents/MacOS/com.apple.Safari.ContentBlockerLoader: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/PasswordManagerBrowserExtensionHelper.app/Contents/MacOS/PasswordManagerBrowserExtensionHelper
+/System/Volumes/Preboot/Cryptexes/App/System/Library/Accounts/Notification/CloudBookmarksAccountsNotifier.bundle/Contents/MacOS/CloudBookmarksAccountsNotifier: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/MacOS/SafariForWebKitDevelopment
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/MacOS/Safari
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/CacheDeleteExtension.appex/Contents/MacOS/CacheDeleteExtension
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/SafariQuickLookPreview.appex/Contents/MacOS/SafariQuickLookPreview
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/DiagnosticExtension.appex/Contents/MacOS/DiagnosticExtension
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/appdiagnose
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Extensions/SafariLinkExtension.appex/Contents/MacOS/SafariLinkExtension
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Extensions/SafariWidgetExtension.appex/Contents/MacOS/SafariWidgetExtension
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.SandboxBroker.xpc/Contents/MacOS/com.apple.Safari.SandboxBroker
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.ContentBlockerLoader.xpc/Contents/MacOS/com.apple.Safari.ContentBlockerLoader
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.BrowserDataImportingService.xpc/Contents/MacOS/com.apple.Safari.BrowserDataImportingService
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libMainThreadChecker.dylib
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libLogRedirect.dylib
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_pthread.dylib
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_kernel.dylib
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_platform.dylib
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libMTLHud.dylib
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libmobileassetd.dylib
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libBacktraceRecording.dylib
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/AccessibilityReaderServices.framework/Versions/A/AccessibilityReaderServices: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/UserNotificationsExtensionPoint.framework/Versions/A/UserNotificationsExtensionPoint: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/FaceTimeSettingsUI.framework/Versions/A/Frameworks/FaceTimeAuthentication.framework/Versions/A/FaceTimeAuthentication: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/SafariServices.framework/PlugIns/SafariServices.wkbundle/Contents/MacOS/SafariServices: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/MapKit.framework/Versions/A/Resources/MapKitSwiftBridge.framework/Versions/A/MapKitSwiftBridge: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.atlas: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.map: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.06
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.01
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.map: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.5: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.2: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.3: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.4: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.04
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.01
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.03
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.02
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.05
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.atlas: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.1: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.6: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.0: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDMTLBronzeDriver.bundle/Contents/MacOS/AMDMTLBronzeDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000Shared.bundle/Contents/MacOS/AMDRadeonX5000Shared: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonVADriver2.bundle/Contents/MacOS/AMDRadeonVADriver2: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonVADriver.bundle/Contents/MacOS/AMDRadeonVADriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelKBLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsMTLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000GLDriver.bundle/Contents/MacOS/ATIRadeonX5000SCLib.dylib
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelICLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsGLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX4000GLDriver.bundle/Contents/MacOS/ATIRadeonX4000SCLib.dylib
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelICLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsMTLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelKBLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsGLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000Shared.bundle/Contents/MacOS/AMDRadeonX6000Shared: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000MTLDriver.bundle/Contents/MacOS/AMDRadeonX5000MTLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000MTLDriver.bundle/Contents/MacOS/AMDRadeonX6000MTLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000GLDriver.bundle/Contents/MacOS/ATIRadeonX6000SCLib.dylib
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDShared.bundle/Contents/MacOS/AMDShared: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDShared.bundle/Contents/PlugIns/libAMDIL902.dylib
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/ApplePDPHelper.framework/Versions/A/ApplePDPHelper: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/WebDriver.framework/Versions/A/XPCServices/com.apple.WebDriver.HTTPService.xpc/Contents/MacOS/com.apple.WebDriver.HTTPService: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/ExclaveFDRDecode.framework/Versions/A/ExclaveFDRDecode: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/CredentialProviderExtensionHelper.xpc/Contents/MacOS/CredentialProviderExtensionHelper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/SafariConfigurationSubscriber.xpc/Contents/MacOS/SafariConfigurationSubscriber: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.SearchHelper.xpc/Contents/MacOS/com.apple.Safari.SearchHelper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.CredentialExtractionHelper.xpc/Contents/MacOS/com.apple.Safari.CredentialExtractionHelper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/PlugInKitDaemon.framework/Versions/A/PlugInKitDaemon: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/HelloWorldMacHelper.framework/Versions/A/HelloWorldMacHelper: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.ExtensionHelper.xpc/Contents/MacOS/com.apple.SafariServices.ExtensionHelper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.xpc/Contents/MacOS/com.apple.SafariServices: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/3425AMD/libLLVMContainer.dylib
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/3425AMD/libcl2module.dylib
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/AuthenticationServices.framework/Versions/A/XPCServices/com.apple.AuthenticationServices.Helper.xpc/Contents/MacOS/com.apple.AuthenticationServices.Helper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.atlas: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.symbols
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.symbols
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.atlas: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libMainThreadChecker.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libLogRedirect.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_pthread.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_kernel.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_platform.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libMTLHud.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libmobileassetd.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libBacktraceRecording.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/AccessibilityReaderServices.framework/Versions/A/AccessibilityReaderServices: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/UserNotificationsExtensionPoint.framework/Versions/A/UserNotificationsExtensionPoint: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/FaceTimeSettingsUI.framework/Versions/A/Frameworks/FaceTimeAuthentication.framework/Versions/A/FaceTimeAuthentication: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/SafariServices.framework/PlugIns/SafariServices.wkbundle/Contents/MacOS/SafariServices: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/MapKit.framework/Versions/A/Resources/MapKitSwiftBridge.framework/Versions/A/MapKitSwiftBridge: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.atlas: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.map: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.06
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.01
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.map: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.5: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.2: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.3: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.4: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.04
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.01
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.03
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.02
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.05
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.atlas: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.1: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.6: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.0: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDMTLBronzeDriver.bundle/Contents/MacOS/AMDMTLBronzeDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000Shared.bundle/Contents/MacOS/AMDRadeonX5000Shared: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonVADriver2.bundle/Contents/MacOS/AMDRadeonVADriver2: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonVADriver.bundle/Contents/MacOS/AMDRadeonVADriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelKBLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsMTLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000GLDriver.bundle/Contents/MacOS/ATIRadeonX5000SCLib.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelICLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsGLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX4000GLDriver.bundle/Contents/MacOS/ATIRadeonX4000SCLib.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelICLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsMTLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelKBLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsGLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000Shared.bundle/Contents/MacOS/AMDRadeonX6000Shared: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000MTLDriver.bundle/Contents/MacOS/AMDRadeonX5000MTLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000MTLDriver.bundle/Contents/MacOS/AMDRadeonX6000MTLDriver: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000GLDriver.bundle/Contents/MacOS/ATIRadeonX6000SCLib.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDShared.bundle/Contents/MacOS/AMDShared: invalid Info.plist (plist or signature have been modified)
+In architecture: x86_64h
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDShared.bundle/Contents/PlugIns/libAMDIL902.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/ApplePDPHelper.framework/Versions/A/ApplePDPHelper: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/WebDriver.framework/Versions/A/XPCServices/com.apple.WebDriver.HTTPService.xpc/Contents/MacOS/com.apple.WebDriver.HTTPService: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/ExclaveFDRDecode.framework/Versions/A/ExclaveFDRDecode: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/CredentialProviderExtensionHelper.xpc/Contents/MacOS/CredentialProviderExtensionHelper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/SafariConfigurationSubscriber.xpc/Contents/MacOS/SafariConfigurationSubscriber: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.SearchHelper.xpc/Contents/MacOS/com.apple.Safari.SearchHelper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.CredentialExtractionHelper.xpc/Contents/MacOS/com.apple.Safari.CredentialExtractionHelper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/PlugInKitDaemon.framework/Versions/A/PlugInKitDaemon: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/HelloWorldMacHelper.framework/Versions/A/HelloWorldMacHelper: invalid Info.plist (plist or signature have been modified)
+In architecture: arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.ExtensionHelper.xpc/Contents/MacOS/com.apple.SafariServices.ExtensionHelper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.xpc/Contents/MacOS/com.apple.SafariServices: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/3425AMD/libLLVMContainer.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/3425AMD/libcl2module.dylib
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/AuthenticationServices.framework/Versions/A/XPCServices/com.apple.AuthenticationServices.Helper.xpc/Contents/MacOS/com.apple.AuthenticationServices.Helper: resource envelope is obsolete (custom omit rules)
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.atlas: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.symbols
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.symbols
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.atlas: code object is not signed at all
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64
+Anthonys-MacBook-Pro:~ root# Run csrutil authenticated-root status (you did already: enabled).
+-sh: syntax error near unexpected token `('
+Anthonys-MacBook-Pro:~ root# csrutil authenticated-root status
+Authenticated Root status: enabled
+Anthonys-MacBook-Pro:~ root# sw_vers -buildVersion
+25A354
+Anthonys-MacBook-Pro:~ root# defaults read /System/Volumes/Preboot/Cryptexes/OS/System/Library/CoreServices/SystemVersion ProductBuildVersion
+25A354
+Anthonys-MacBook-Pro:~ root# ls -lh /System/Volumes/Preboot/Cryptexes/Incoming
+total 0
+drwxr-xr-x  2 root  wheel    64B Sep 17 19:14 App
+drwxr-xr-x  4 root  wheel   128B Sep  9 02:15 OS
+Anthonys-MacBook-Pro:~ root# sudo find /System/Volumes/Preboot/Cryptexes -type f -perm -111 -exec shasum -a 256 {} \; > ~/cryptex_hashes.txt
+
+Anthonys-MacBook-Pro:~ root# 
+Anthonys-MacBook-Pro:~ root# strings /System/Library/KernelCollections/BootKernelExtensions.kc | grep -A2 -B2 teamid
+Anthonys-MacBook-Pro:~ root# codesign -dv --verbose=4 /System/Library/KernelCollections/BootKernelExtensions.kc
+/System/Library/KernelCollections/BootKernelExtensions.kc: code object is not signed at all
+Anthonys-MacBook-Pro:~ root# kmutil showloaded
+No variant specified, falling back to release
+Index Refs Address            Size       Wired      Name (Version) UUID <Linked Against>
+    3  219 0                  0          0          com.apple.kpi.bsd (25.0.0) E67CAF31-8F84-389C-BB27-7FAEC762FA14 <>
+    4   11 0                  0          0          com.apple.kpi.dsep (25.0.0) E67CAF31-8F84-389C-BB27-7FAEC762FA14 <>
+    5  249 0                  0          0          com.apple.kpi.iokit (25.0.0) E67CAF31-8F84-389C-BB27-7FAEC762FA14 <>
+    6  250 0                  0          0          com.apple.kpi.libkern (25.0.0) E67CAF31-8F84-389C-BB27-7FAEC762FA14 <>
+    7  233 0                  0          0          com.apple.kpi.mach (25.0.0) E67CAF31-8F84-389C-BB27-7FAEC762FA14 <>
+    8  183 0                  0          0          com.apple.kpi.private (25.0.0) E67CAF31-8F84-389C-BB27-7FAEC762FA14 <>
+    9  157 0                  0          0          com.apple.kpi.unsupported (25.0.0) E67CAF31-8F84-389C-BB27-7FAEC762FA14 <>
+   10   21 0xfffffe0007bde680 0x1eb10    0x1eb10    com.apple.kec.corecrypto (26.0) B656AAD7-DC6D-3258-983C-CD8E14698C95 <9 8 7 6 5 3>
+   11    0 0xfffffe0007401a00 0x51f      0x51f      com.apple.kec.AppleEncryptedArchive (1) 0851ED25-EC63-33FC-93E1-871A25A08071 <10 8 7 6>
+   12    0 0xfffffe000776a000 0x4f0      0x4f0      com.apple.kec.Compression (1.0) 4C4C7893-40FF-3DCB-9CD9-B528D3C4DA69 <10 8 7 6>
+   13    0 0xfffffe0007aeccc0 0xf28      0xf28      com.apple.kec.InvalidateHmac (1) 05AFF4A3-6F10-3E0D-9142-54C63DDE8C7C <9 8 7 6 5>
+   14    6 0xfffffe0007aeed00 0x7078     0x7078     com.apple.kec.Libm (1) 4BE99844-4141-37A2-8E2C-5000207E317A <6>
+   15    0 0xfffffe0007c103f0 0xd55      0xd55      com.apple.kec.pthread (1) BADB8104-0DD8-3205-A9F0-B8499E5CFAFE <9 8 7 6 5 3>
+   16    5 0xfffffe0007926620 0xbbf      0xbbf      com.apple.iokit.IOCryptoAcceleratorFamily (1.0.1) C261B1BF-636D-3EA4-BF24-510061C334DB <9 7 6 5 3>
+   17    2 0xfffffe000777b620 0x4120     0x4120     com.apple.kext.CoreTrust (1) DB8AB6C6-08CD-37DF-94E0-FB565007C141 <10 8 6>
+   18    3 0xfffffe00074b4f80 0x10eb6    0x10eb6    com.apple.security.AppleImage4 (7.0.0) 8AE88F91-F022-3AB2-A5DD-A6A5CF3FFC1F <17 16 10 9 8 7 6 5 4 3>
+   19   17 0xfffffe000776a4f0 0x3e67     0x3e67     com.apple.iokit.CoreAnalyticsFamily (1) 378B4CB6-14C4-36EE-B88A-7C0537CB105A <9 8 7 6 5 3>
+   20   15 0xfffffe0007581820 0x1e30a    0x1e30a    com.apple.driver.AppleMobileFileIntegrity (1.0.5) 3309BA0E-03CD-3311-AE04-487C5045C7CF <19 18 17 10 9 8 7 6 5 4 3>
+   21    2 0xfffffe000756e060 0x547      0x547      com.apple.kext.AppleMatch (1.0.0d1) ECF2674C-72D7-3330-9F3D-FFF9A9FB817B <8 6 5 3>
+   22   17 0xfffffe00079d0aa0 0x2100     0x2100     com.apple.iokit.IOStorageFamily (2.1) 15E889E8-82A7-3A2D-8DDB-5D6F518536E4 <9 8 7 6 5 3>
+   23    2 0xfffffe0007b055e0 0x28ef5    0x28ef5    com.apple.security.sandbox (300.0) B862F17B-2E14-3364-87AB-F8A5FEC1B4D6 <22 21 20 10 9 8 7 6 5 4 3>
+   24    2 0xfffffe0007af8e50 0xf71      0xf71      com.apple.security.quarantine (4) 49658D0E-383D-34C8-866A-A8973227677D <23 21 9 8 7 6 5 4 3>
+   25    0 0xfffffe0007643510 0x31dd     0x31dd     com.apple.AppleSystemPolicy (2.0.0) 45FCB29A-70CD-3308-90A9-C202D872D0CE <24 23 20 9 8 7 6 5 4 3>
+   26   29 0xfffffe00079c2520 0xb66      0xb66      com.apple.iokit.IOReportFamily (47) 1E06C458-34BE-3CD4-8BEB-C5345F258689 <8 7 6 5>
+   27    1 0xfffffe00079cfd40 0xd58      0xd58      com.apple.iokit.IOSlowAdaptiveClockingFamily (1.0.0) A6698151-927E-35C3-878F-41C0C7EC87C2 <9 8 7 6 5 3>
+   28  116 0xfffffe000714dc20 0x102a7    0x102a7    com.apple.driver.AppleARMPlatform (1.0.2) 30254F03-8034-31CD-AC22-B3F46AC4C728 <27 26 22 9 8 7 6 5 3>
+   29    3 0xfffffe0007796f80 0x3eb30    0x3eb30    com.apple.driver.FairPlayIOKit (72.14.0) E1A3319E-A2F1-36D5-BD88-7DB8FD72D977 <9 8 7 6 5 3>
+   30    3 0xfffffe00072d4d70 0x83b      0x83b      com.apple.driver.AppleAudioClockLibs (500.4) A539D45E-D6ED-3D78-B99B-90C911B9FC5F <9 7 6 5 3>
+   31    6 0xfffffe00074af640 0x1052     0x1052     com.apple.driver.AppleIISController (500.2) 6DD0D5DF-24F3-3F9B-928F-6B068C13186F <28 9 8 7 6 5 3>
+   32    6 0xfffffe0007902ce0 0x9f0      0x9f0      com.apple.iokit.IOAudio2Family (1.0) 72B7E263-87E6-3B35-AE4E-74F02543FDED <7 6 5 3>
+   33    2 0xfffffe0007925be0 0xa36      0xa36      com.apple.iokit.IOCECFamily (1) A17E9650-9B87-3243-8F7C-B1A9CED1DB4D <6 5>
+   34    4 0xfffffe0007950a10 0x62f2     0x62f2     com.apple.iokit.IOHDCPFamily (1.0.0) 65A95568-489B-30BC-860C-63AE8708E131 <7 6 5>
+   35   11 0xfffffe00078bae90 0x24fd4    0x24fd4    com.apple.iokit.IOAVFamily (1.0.0) C13148FF-E5E8-32D7-BA6C-3CDA37072D50 <34 33 32 31 30 28 14 9 8 7 6 5 3>
+   36   15 0xfffffe00079d33a0 0x63e5     0x63e5     com.apple.iokit.IOSurface (392.5) 2AB7E1EC-D587-3B4E-8401-1AD9DA9FF6F6 <9 8 7 6 5 3>
+   37    1 0xfffffe00071396d0 0xfe0      0xfe0      com.apple.AUC (1.0) 003205D8-70CB-3994-BFC1-78669770EF37 <36 35 28 9 8 7 6 5 3>
+   38   27 0xfffffe000795e7e0 0xb087     0xb087     com.apple.iokit.IOHIDFamily (2.0.0) 981F423E-52E7-3764-A967-1737C026406E <26 9 8 7 6 5 4 3>
+   39    1 0xfffffe000736dde0 0xb78c     0xb78c     com.apple.driver.AppleBiometricSensor (2) DC2D33CB-E363-32F2-928A-E81BB630CAC7 <38 28 26 19 9 8 7 6 5 3>
+   40   27 0xfffffe00079cf630 0x706      0x706      com.apple.driver.IOSlaveProcessor (1) BA229AEB-1A93-320E-B012-AF5C54CDE2C8 <8 7 6 5>
+   41   12 0xfffffe000713c410 0x14eb     0x14eb     com.apple.driver.AppleA7IOP (1.0.2) C3424A9D-F38B-3426-B002-023290E8872C <40 28 7 6 5 3>
+   42    9 0xfffffe00079271e0 0x25a0     0x25a0     com.apple.driver.IODARTFamily (1) A3085D62-BB96-339A-B96B-7007985D0F42 <28 8 7 6 5 3>
+   43   12 0xfffffe0007601710 0xd1e2     0xd1e2     com.apple.driver.AppleSEPManager (1.0.1) EBE0D22E-7247-30D2-B47B-1399A1144B7A <42 41 40 28 10 9 8 7 6 5 3>
+   44    2 0xfffffe0007396330 0x19cd8    0x19cd8    com.apple.driver.AppleCredentialManager (1.0) 866257A5-78F6-3BA6-9B19-52B026492772 <43 40 19 10 9 8 7 6 5 3>
+   45    0 0xfffffe00073c71e0 0x3dc0     0x3dc0     com.apple.driver.AppleDiskImages2 (511) A74F7E53-0D9C-3144-8AA2-340E133AB34A <22 8 7 6 5 3>
+   46    3 0xfffffe00073d95a0 0x1b04     0x1b04     com.apple.driver.AppleEffaceableStorage (1.0) D4D6806C-9686-3FA2-92DE-49BBB0376B0F <9 7 6 5 3>
+   47    0 0xfffffe0007404080 0xade      0xade      com.apple.driver.AppleFDEKeyStore (28.30) 201A7B4B-51C8-3020-A93B-003F6C4C34B8 <46 10 9 8 7 6 5 3>
+   48   18 0xfffffe0007af9dd0 0xa700     0xa700     com.apple.driver.RTBuddy (1.0.0) 10DFB4EB-A2E8-3A9C-B2FA-AC2409AE1DE0 <41 40 28 26 19 10 9 8 7 6 5 3>
+   49    0 0xfffffe00074125e0 0x4564c    0x4564c    com.apple.driver.AppleH16ANEInterface (9.15.0) 03BA220F-AE5A-38D4-9EA0-09D78142124C <48 42 36 28 26 10 9 8 7 6 5 3>
+   50   13 0xfffffe000798e190 0x1915     0x1915     com.apple.iokit.IONetworkingFamily (3.4) AB202375-4F08-3539-B71D-A9E13AA33412 <9 8 7 6 5 3>
+   51    2 0xfffffe000799e7a0 0x191a     0x191a     com.apple.driver.mDNSOffloadUserClient (1.0.1b8) 24837991-DA6C-3E76-89ED-DF3CC1B80B25 <50 8 6 5 3>
+   52    8 0xfffffe00079cc3a0 0x3290     0x3290     com.apple.iokit.IOSkywalkFamily (1.0) 7C4B4EF3-43A7-39EF-8748-98A3320C9212 <51 50 9 8 7 6 5 3>
+   53    0 0xfffffe00074b4240 0xd40      0xd40      com.apple.driver.AppleIPAppender (1.0) 58D36719-3807-3217-BB1D-71EE3FFDC163 <52 50 9 8 7 6 5 3>
+   54    0 0xfffffe00074dc420 0x5117     0x5117     com.apple.driver.AppleLockdownMode (1) 86FE7B6F-4DBB-3740-B798-5EA67D43AC35 <44 9 8 7 6 5 3>
+   55    1 0xfffffe00079c1cc0 0x854      0x854      com.apple.iokit.IORSMFamily (1) 2E421C61-0C8E-3503-9CCA-2E2B62A5A425 <7 6 5 3>
+   56    0 0xfffffe00075ef0a0 0xc8b      0xc8b      com.apple.driver.AppleRSMChannel (1) 09BE9305-C119-3409-B008-56B9BCAC16F5 <55 8 7 6 5 3>
+   57    3 0xfffffe00079c3090 0x25e0     0x25e0     com.apple.iokit.IOSCSIArchitectureModelFamily (539) F1BB9972-6A14-39CB-9DDA-1D5746736A97 <8 7 6 5 3>
+   58    1 0xfffffe00079c5670 0x1e9b     0x1e9b     com.apple.iokit.IOSCSIBlockCommandsDevice (539) 87BE5A40-368D-3C6F-92AB-C043BA599A14 <57 22 8 7 6 5 3>
+   59    6 0xfffffe00079cb5d0 0xdd0      0xdd0      com.apple.iokit.IOSerialFamily (11) 6AC0DEE7-80E6-32F8-B7D4-3DA3059F9175 <9 8 7 6 5 3>
+   60    7 0xfffffe00075ae070 0x20d8     0x20d8     com.apple.driver.AppleOnboardSerial (1.0) 600084C1-52F1-35FE-AB00-254120DDBCDC <59 52 9 7 6 5 3>
+   61   18 0xfffffe00078dfe70 0x22238    0x22238    com.apple.iokit.IOAccessoryManager (1.0.0) 37B0F197-06C7-3491-B2A5-5D99DE52919E <60 59 38 28 9 8 7 6 5 3>
+   62    2 0xfffffe000714a7b0 0x3465     0x3465     com.apple.driver.AppleARMPMU (1.0) 3672AE6B-0AD5-36F1-8957-A3A37B834E22 <61 28 26 9 8 7 6 5 3>
+   63    3 0xfffffe00073fd8a0 0x3360     0x3360     com.apple.driver.AppleEmbeddedTempSensor (1.0.0) AD82B7A6-CA09-3991-8D5B-DF51B1C39A14 <38 28 26 9 7 6 5 3>
+   64   12 0xfffffe000760e900 0x9806     0x9806     com.apple.driver.AppleSMC (3.1.9) EA2341B6-BD65-3FB6-8E96-E1F2BE8D1A82 <63 62 61 48 41 40 38 28 8 7 6 5 3>
+   65   13 0xfffffe0007735ce0 0xa8f      0xa8f      com.apple.driver.usb.AppleUSBCommon (1.0) 2DFB0365-E245-35CF-A3A8-5FA7F7E769AA <7 6 5 3>
+   66    3 0xfffffe0007ac3320 0x6b1      0x6b1      com.apple.driver.AppleUSBHostMergeProperties (1.2) C47AF63C-839D-3142-85C1-3EC615038D6E <8 6 5 3>
+   67   15 0xfffffe00079bdcc0 0x4000     0x4000     com.apple.iokit.IOPortFamily (1.0) 4112D52A-6987-33B6-8DDC-F829071E6B69 <9 8 7 6 5 3>
+   68   14 0xfffffe0007a89e80 0x13600    0x13600    com.apple.iokit.IOUSBHostFamily (1.2) 067CED28-FB14-358D-B7DB-DC92AF73AB49 <67 66 65 64 61 20 9 8 7 6 5 3>
+   69   19 0xfffffe00079b0ab0 0xd210     0xd210     com.apple.iokit.IOPCIFamily (2.9) 9B58E12F-2265-3D51-BC76-D111AC58B419 <9 8 7 6 5>
+   70    1 0xfffffe0007ae70d0 0x36ee     0x36ee     com.apple.iokit.IOUSBMassStorageDriver (270) 7F8C041C-843B-3E4F-8F65-C6ADF4A7757A <69 68 57 22 8 7 6 5 3>
+   71    1 0xfffffe0007640030 0xe1d      0xe1d      com.apple.driver.AppleUSBTDM (557) 28E46297-E1FA-36FA-BEEB-003CA9C91931 <70 68 58 57 22 20 9 8 7 6 5 3>
+   72    0 0xfffffe00075fc130 0x55d4     0x55d4     com.apple.driver.AppleSEPKeyStore (2) 254A4A0A-B501-3733-9E67-4D2D397DB775 <71 46 44 43 40 20 16 10 9 8 7 6 5 3>
+   73    0 0xfffffe000765b7d0 0x11fb     0x11fb     com.apple.driver.AppleT6041ANEHAL (9.15.3) 4916EB21-62A0-38E9-B599-5CD3C404D6DD <28 10 9 8 7 6 5 3>
+   74    0 0xfffffe00077304d0 0x1058     0x1058     com.apple.driver.AppleUIO (1) E319DC56-2E69-3294-826E-FCDDF707E0C5 <69 8 7 6 5 3>
+   75    0 0xfffffe0007785e90 0xd32c     0xd32c     com.apple.iokit.EndpointSecurity (1) D1581A20-01DB-37B9-871F-ADD28AC590FD <24 20 9 8 7 6 5 4 3>
+   76    0 0xfffffe000790d8a0 0xec35     0xec35     com.apple.iokit.IOBluetoothFamily (9.0.0) 5C63A094-1F51-3741-8011-31553229BE47 <68 28 26 9 8 7 6 5 3>
+   77    1 0xfffffe000794c1d0 0x483d     0x483d     com.apple.iokit.IOGraphicsFamily (599) 16E1F66D-1670-3220-B3B4-871D4B988D53 <69 9 7 6 5 3>
+   78    5 0xfffffe0007956d10 0x1ec4     0x1ec4     com.apple.driver.DiskImages (493.0.0) E84071A5-A811-319A-8B93-9295F77651CF <22 9 8 7 6 5 3>
+   79    0 0xfffffe000796d120 0x6a9      0x6a9      com.apple.iokit.IOKitRegistryCompatibility (1) B5DEE827-0142-3EB3-B90F-3D2D7064E1FB <6 5>
+   80    3 0xfffffe0007a40ad0 0xce78     0xce78     com.apple.iokit.IOTimeSyncFamily (1400.62) B105E0A8-593B-3DE8-9C0B-06C4707DEF15 <52 50 28 8 7 6 5 3>
+   81    0 0xfffffe0007acc090 0x4015     0x4015     com.apple.driver.usb.AppleUSBUserHCI (1) 1728060A-8E43-3302-82C9-99C17A5AED96 <68 65 8 7 6 5 3>
+   82    0 0xfffffe0007aea7c0 0x1301     0x1301     com.apple.iokit.IOUserEthernet (1.0.1) 0B3FB70B-BEE7-32D0-AFD5-30F6C126C64B <50 20 8 7 6 5 3>
+   83    0 0xfffffe00075681e0 0x5e77     0x5e77     com.apple.driver.AppleM68Buttons (1.0.0d1) 0D647F82-392A-3B9C-905A-FA9C69E3FDA1 <38 28 9 8 7 6 5 3>
+   84    2 0xfffffe0007402be0 0x1497     0x1497     com.apple.driver.AppleEverestErrorHandler (1) 795CCCBC-40BD-3BC3-B4AC-3E2C285510B9 <28 26 9 8 7 6 5 3>
+   85    0 0xfffffe0007657760 0x4070     0x4070     com.apple.driver.AppleT6041 (1) 05CC0CCC-BEF0-37AB-BAD5-4C5F13AFA729 <84 28 26 9 8 7 6 5 3>
+   86    4 0xfffffe000740ec20 0xf32      0xf32      com.apple.driver.AppleFirmwareUpdateKext (1) 3B1F975F-F9BF-3EE3-8AB0-3E58DB5CA849 <18 10 9 8 7 6 5 3>
+   87   11 0xfffffe00073e9880 0x5470     0x5470     com.apple.driver.AppleEmbeddedAudioLibs (500.4) D5900301-E73A-3BE6-A5C4-45359324EB7C <86 30 28 9 8 7 6 5 3>
+   88    6 0xfffffe00079a1f00 0x6172     0x6172     com.apple.iokit.IOPAudioDriverFamily (300.4) 7705ABFE-1732-3654-9139-75B66A6B24E9 <87 28 8 7 6 5 3>
+   89    0 0xfffffe0007618110 0x191d     0x191d     com.apple.driver.AppleSPIMC (1) BB59A19D-80CD-3F92-BCB9-3FBE9F8A7BF3 <28 9 7 6 5 3>
+   90    0 0xfffffe00075efd30 0xaf2      0xaf2      com.apple.driver.AppleS5L8920XPWM (1.0.0d1) 7903953F-ECFF-33B3-9453-B0685F6C2E9D <28 9 7 6 5>
+   91    4 0xfffffe00075b0150 0x1022     0x1022     com.apple.driver.ApplePIODMA (1) 8595368B-2A5F-326A-A13D-ADED5F4060CC <7 6 5 3>
+   92    0 0xfffffe0007647730 0x10a1     0x10a1     com.apple.driver.AppleT6020PCIePIODMA (1) 8448EC98-A131-37A5-8591-BC846F19D9B2 <91 69 42 28 26 9 8 7 6 5 3>
+   93    0 0xfffffe000766bfb0 0x2fbc     0x2fbc     com.apple.driver.AppleT8110DART (1) F7E6CB85-483A-30E8-B8CF-A89641AD6661 <42 28 9 8 7 6 5 3>
+   94    4 0xfffffe000771c070 0x2fc0     0x2fc0     com.apple.driver.AppleTypeCPhy (1) 2C2D697E-8A48-3A8A-90A1-C8A9F8F47E5E <67 65 61 28 8 7 6 5 3>
+   95    4 0xfffffe0007929f90 0x13370    0x13370    com.apple.iokit.IODisplayPortFamily (1.0.0) 8C6D8554-A7A7-3A7B-A604-243CC3417739 <67 61 35 34 33 9 8 7 6 5 3>
+   96   10 0xfffffe00079da020 0x66aa4    0x66aa4    com.apple.iokit.IOThunderboltFamily (9.3.3) 499B5B3F-D7C6-38F0-91D7-4154B46434FB <67 64 61 7 6 5 3>
+   97    0 0xfffffe00073cafa0 0xaea7     0xaea7     com.apple.driver.AppleDisplayCrossbar (1.0.0) 668E32B0-3689-3A3D-A15E-62B1F5EA1159 <96 95 94 67 61 35 28 6 5>
+   98    0 0xfffffe00076615c0 0x7ce8     0x7ce8     com.apple.driver.AppleT6041MCC (1) 48951C69-5DA1-3971-AE81-0C24E0ACE352 <84 28 26 9 8 7 6 5 3>
+   99    0 0xfffffe000713ba90 0x979      0x979      com.apple.driver.AppleA7IOP-MXWrap-v1 (1.0.2) DC3BB796-EC3E-3A3B-92A5-B662A2B9E253 <41 40 28 7 6 5 3>
+  100    8 0xfffffe00073f1cf0 0xa1a8     0xa1a8     com.apple.driver.AppleEmbeddedPCIE (1) 20C1BC00-7276-3224-835A-C0EBE00217FD <91 69 67 61 42 28 26 9 8 7 6 5 3>
+  101    9 0xfffffe0007bd7ad0 0x6bab     0x6bab     com.apple.driver.corecapture (1.0.4) D376D67D-C188-3CFB-ACB4-DA7BFC7AE6B6 <9 8 7 6 5 3>
+  102    2 0xfffffe00075a8870 0x57fb     0x57fb     com.apple.driver.AppleOLYHAL (1) 88FD5508-E3F1-3D1E-8969-CA6429D01752 <101 100 69 60 59 28 19 9 8 7 6 5 3>
+  103    2 0xfffffe000796ab70 0x25a1     0x25a1     com.apple.driver.IOImageLoader (1.0.0) 1E41717D-2466-351E-9907-B63CFF19C954 <101 10 9 8 7 6 5 3>
+  104    2 0xfffffe00077e3a70 0xaca2c    0xaca2c    com.apple.iokit.IO80211Family (1200.13.1) 209DCF89-DEB7-3598-88DB-36BAD41AA2C4 <101 52 50 20 19 10 9 8 7 6 5 3>
+  105    1 0xfffffe00072f1170 0x77349    0x77349    com.apple.driver.AppleBCMWLANCore (1.0.0) 790AC250-A97D-3BD9-94E2-ABC14473467A <104 103 102 101 80 69 60 59 52 51 50 28 20 19 10 9 8 7 6 5 3>
+  106    3 0xfffffe000737c200 0x60d      0x60d      com.apple.driver.AppleBluetoothDebugService (1) DE55BA6E-D574-3C63-AA2B-D40DA40BE1F4 <7 6 5 3>
+  107    0 0xfffffe00072d9910 0x17860    0x17860    com.apple.driver.AppleBCMWLANBusInterfacePCIe (1) 74E70825-37D9-398E-A48A-D9F88EDE940A <106 105 104 103 102 101 100 69 60 52 50 28 19 9 8 7 6 5 3>
+  108    1 0xfffffe000759fb30 0x2bfd     0x2bfd     com.apple.driver.AppleMultiFunctionManager (1) 8B81B487-1945-30C2-B6D9-F49E5ADDCDA7 <101 100 69 68 60 28 9 8 7 6 5 3>
+  109    0 0xfffffe000737c810 0x2c25     0x2c25     com.apple.driver.AppleBluetoothModule (1) 06394825-A40B-3945-BB92-A1BCA59ED897 <108 101 28 9 8 7 6 5 3>
+  110    3 0xfffffe00074107f0 0x1630     0x1630     com.apple.driver.AppleGPIOICController (1.0.2) 673E1205-30C7-361F-9B7B-37A3438D59F6 <28 26 9 8 7 6 5 3>
+  111    0 0xfffffe00075f0830 0xf5a      0xf5a      com.apple.driver.AppleS5L8940XI2C (1.0.0d2) 62598E1B-1F53-31BD-BC64-C10A0F92B78D <110 28 9 7 6 5 3>
+  112    0 0xfffffe0007457c30 0x24979    0x24979    com.apple.driver.AppleH16CameraInterface (4.27) 40ACBF10-FA81-33D6-9578-A786151AAD17 <48 42 36 28 26 10 9 8 7 6 5 3>
+  113    0 0xfffffe00076487e0 0x3968     0x3968     com.apple.driver.AppleT6040PCIe (1) 132B8013-0411-371D-B0E5-859E7BF37C38 <100 69 28 26 9 8 7 6 5 3>
+  114    1 0xfffffe00073d6b70 0x1b9b     0x1b9b     com.apple.driver.AppleDockChannel (1) 79E7D36C-CC74-38AC-BB75-3BBB6121D1AA <28 9 8 7 6 5 3>
+  115    0 0xfffffe000713afb0 0xae0      0xae0      com.apple.driver.AppleA7IOP-ASCWrap-v6 (1.0.2) C709EBF9-589D-32E4-AB85-7B1D808F428A <41 40 28 7 6 5 3>
+  116    0 0xfffffe000762a570 0x91f      0x91f      com.apple.driver.AppleSecureRepair (1.0.0) ECD48193-1CA4-35B3-9F14-1BAC428F2822 <110 8 6 5>
+  117    0 0xfffffe000764c150 0xb610     0xb610     com.apple.driver.AppleT6040PCIeC (1) CC716DED-6C98-311B-A820-21A30868471D <100 96 91 69 42 28 26 9 8 7 6 5 3>
+  118    0 0xfffffe00076466f0 0x103e     0x103e     com.apple.driver.AppleT6020PCIeCPIODMA (1) 660B8EC1-1877-3772-BC37-452C10ADBB23 <91 69 42 28 26 9 8 7 6 5 3>
+  119    0 0xfffffe00076cb320 0x3aaa4    0x3aaa4    com.apple.driver.AppleThunderboltNHI (7.2.81) DA3E6545-F6FF-3D2F-970C-EE478CCE8FFF <110 96 69 67 61 8 7 6 5 3>
+  120    0 0xfffffe00075f5450 0x4581     0x4581     com.apple.driver.AppleSDXC (3.5.4) B7A1E54B-53D4-3C32-9A51-F9BAAE66195D <100 69 61 28 26 22 7 6 5 3>
+  121    0 0xfffffe00075775e0 0x2072     0x2072     com.apple.driver.AppleMobileApNonce (1) 5ECA8460-53C3-30F2-B048-391B25E2287E <43 28 16 9 8 7 6 5 3>
+  122    5 0xfffffe00075b1180 0xfd20     0xfd20     com.apple.driver.ApplePMGR (1) 05147942-CEB1-3413-B4B9-2E83FA86AF7B <28 26 9 8 7 6 5 3>
+  123    0 0xfffffe00076692b0 0x2299     0x2299     com.apple.driver.AppleT6041PMGR (1) 63A59030-9D78-3B33-897C-555ABA8EB201 <122 28 14 9 8 7 6 5 3>
+  124    0 0xfffffe00075f40e0 0x136c     0x136c     com.apple.driver.AppleSART (1) 3680E473-3586-3BEE-B0F2-DAD934F55ECC <28 8 7 6 5>
+  125    0 0xfffffe00075eb0a0 0x181a     0x181a     com.apple.driver.AppleQSPIMC (1) 3C64A1E6-C739-344A-8293-A261D9DDD3F8 <28 9 7 6 5 3>
+  126    0 0xfffffe0007619a30 0x2f68     0x2f68     com.apple.driver.AppleSPMI (1.0.1) BA962BB8-5CBD-3A77-BB1E-A2A52E272FE3 <28 9 7 6 5 3>
+  127    5 0xfffffe0007409f30 0x4ce1     0x4ce1     com.apple.driver.AppleFirmwareKit (1) ED425332-655B-3981-A0F4-C2EC854D2654 <86 64 48 41 40 28 26 9 8 7 6 5 3>
+  128    2 0xfffffe000777f740 0x40f4     0x40f4     com.apple.driver.DCPAVFamilyProxy (1) B2B42CFC-598E-3FDB-B11F-583EC7432A02 <127 35 28 5>
+  129    3 0xfffffe00074e1540 0x86c9b    0x86c9b    com.apple.driver.AppleM2ScalerCSCDriver (265.0.0) 017E6C08-490C-32D6-86AF-E10CEC46D45F <42 36 28 19 9 8 7 6 5 3>
+  130    3 0xfffffe0007975120 0x9768     0x9768     com.apple.iokit.IOMobileGraphicsFamily (343.0.0) 82EDBCD9-CDCE-39B6-9BB9-62F0A00CFDD8 <129 36 35 28 20 9 8 7 6 5 3>
+  131    2 0xfffffe00073b0990 0x21ed     0x21ed     com.apple.driver.AppleDCP (1) 9B7A91C1-A32C-3311-801B-B6F72746E1B9 <127 48 28 6 5>
+  132    2 0xfffffe000796d7d0 0x7948     0x7948     com.apple.iokit.IOMobileGraphicsFamily-DCP (343.0.0) 5A5DD039-FD74-3664-AC05-B1FC2D6994C3 <131 130 129 48 40 36 35 28 20 9 8 7 6 5 3>
+  133    1 0xfffffe00073d5e50 0xd13      0xd13      com.apple.driver.AppleDisplayManager (1.0) A6CE4E51-F98B-3CDC-B627-9AF8415BA265 <132 130 43 36 28 9 8 7 6 5 3>
+  134    0 0xfffffe0007579660 0x81b8     0x81b8     com.apple.driver.AppleMobileDispT604X-DCP (140.0) 189C8135-8E29-38B1-B756-A902050E0193 <133 132 130 129 48 43 40 37 36 35 28 9 7 6 5 3>
+  135    0 0xfffffe00075d7a10 0xcffa     0xcffa     com.apple.driver.AppleProResHW (525.3) 6063B752-9CBD-349F-A4B6-A709B8CE6599 <36 28 9 7 6 5 3>
+  136    1 0xfffffe0007ac26b0 0xc61      0xc61      com.apple.driver.usb.AppleUSBHostCompositeDevice (1.2) 56D49591-0DA9-3CE1-AB34-D0C58B8BA16D <68 65 8 7 6 5 3>
+  137    1 0xfffffe0007ac59d0 0x4478     0x4478     com.apple.driver.usb.AppleUSBHub (1.2) 36C026EF-6ADE-36CA-81C8-5283352E9E3E <68 65 7 6 5 3>
+  138    2 0xfffffe0007400c00 0xdf3      0xdf3      com.apple.driver.AppleEmbeddedUSBHost (1) DA90C279-1B0F-3C11-9951-F961CF9B0D67 <137 136 68 66 65 28 20 9 8 7 6 5 3>
+  139    2 0xfffffe0007ad5be0 0xac64     0xac64     com.apple.driver.usb.AppleUSBXHCI (1.2) 14F80A08-84A1-3956-9275-40AB5C14FD36 <68 67 65 61 28 9 8 7 6 5 3>
+  140    1 0xfffffe0007aac690 0xb650     0xb650     com.apple.driver.usb.AppleSynopsysUSBXHCI (1) 8B25DBB8-5C86-3D03-8349-6A8BA9FE8358 <139 138 94 68 67 65 61 28 9 8 7 6 5 3>
+  141    0 0xfffffe0007a9f370 0xd320     0xd320     com.apple.driver.usb.AppleSynopsysUSB40XHCI (1) D619B545-A766-3A42-B2F1-DA6145758E02 <140 139 138 96 68 67 65 61 28 9 8 7 6 5 3>
+  142    3 0xfffffe0007a720c0 0x50c9     0x50c9     com.apple.iokit.IOUSBDeviceFamily (2.0.0) 6C310F3E-5F9E-3128-8834-B0376C2A5121 <65 8 7 6 5 3>
+  143    1 0xfffffe0007a77190 0x86c4     0x86c4     com.apple.driver.AppleUSBXDCI (1.0) E8B8A629-E622-349E-884C-CE15051A0FB7 <142 65 8 7 6 5 3>
+  144    0 0xfffffe0007a7f860 0xa611     0xa611     com.apple.driver.AppleUSBXDCIARM (1.0) A1D02DAC-14BA-3D7D-8E50-447DAE17C7A8 <143 142 94 68 67 65 61 28 8 7 6 5 3>
+  145    0 0xfffffe00074c9b70 0xe0dc     0xe0dc     com.apple.driver.AppleJPEGDriver (7.7.2) 03E60724-1343-32CD-A2A5-C9C81F570ABE <36 28 19 9 8 7 6 5 3>
+  146    0 0xfffffe000715fb20 0x9f859    0x9f859    com.apple.driver.AppleAVD (904.2) 65589E40-1B81-3C81-AD10-55DD5E430696 <36 29 28 19 9 8 7 6 5 3>
+  147    1 0xfffffe000793d300 0xb9dc     0xb9dc     com.apple.iokit.IOGPUFamily (128.3) 12EE4863-9362-3680-B665-C43932E78BD5 <77 69 36 26 20 9 8 7 6 5 3>
+  148    0 0xfffffe0007120ec0 0x17160    0x17160    com.apple.AGXG16X (340.26.3) 86E302A3-9E24-3408-A873-796C2226AA0B <147 48 36 28 26 20 19 14 9 8 7 6 5 3>
+  149    0 0xfffffe00071ff380 0xd3d6f    0xd3d6f    com.apple.driver.AppleAVE2 (904.76.7) 7A8876A3-B487-3EE7-9AA2-FE2DFDC1212D <36 29 28 19 9 7 6 5 3>
+  150    0 0xfffffe000771f030 0xeec9     0xeec9     com.apple.driver.AppleT6040TypeCPhy (1) DC9185BC-391F-3C99-9DE5-12BC0AFF5DC0 <94 67 61 48 40 7 6 5 3>
+  151    0 0xfffffe000762ae90 0x7ca      0x7ca      com.apple.driver.AppleSerialShim (1) 03C436B9-AFFD-3B99-BD67-660F75E4E0E7 <28 9 8 7 6 5 3>
+  152    0 0xfffffe0007629dd0 0x793      0x793      com.apple.driver.AppleSamsungSerial (1.0.0d1) 9A6A79A2-4BD7-321D-97A1-170EE5D21DAC <60 59 28 9 7 6 5 3>
+  153    0 0xfffffe00075c4300 0x2144     0x2144     com.apple.driver.ApplePTD (1.0.0) 9E11E9E4-A040-34C4-93FD-F36748FE14F9 <28 9 8 7 6 5 3>
+  154    0 0xfffffe0007401f20 0xcb3      0xcb3      com.apple.driver.AppleEventLogHandler (1) 5F49ED57-03AA-323C-9DFF-2FA9DA44D4FB <28 9 8 7 6 5 3>
+  155    0 0xfffffe000715ded0 0x1c50     0x1c50     com.apple.driver.AppleARMWatchdogTimer (1) F4F2AF12-4173-3CA8-A970-447EF8C5DF28 <28 9 8 7 6 5 3>
+  156    0 0xfffffe00075f1e70 0x1a29     0x1a29     com.apple.driver.AppleS8000AES (1) FB4EC3E2-B412-3D71-967F-ABFDD2CC5E15 <28 16 9 8 7 6 5 3>
+  157    0 0xfffffe00075f38a0 0x83f      0x83f      com.apple.driver.AppleS8000DWI (1.0.0d1) 912DA352-09BD-3668-B7B5-ABBAF25C8292 <28 9 7 6 5 3>
+  158    0 0xfffffe00074c8a60 0x1110     0x1110     com.apple.driver.AppleInterruptControllerV3 (1.0.0d1) D7DF58C6-E091-3903-B178-0F4C675374C6 <28 9 8 7 6 5 3>
+  159    0 0xfffffe000766b550 0xa60      0xa60      com.apple.driver.AppleT6041SOCTuner (1) 3D13B895-3F30-38FC-B221-DB3E260597C1 <122 28 26 9 8 7 6 5 3>
+  160    0 0xfffffe000765c9d0 0x4be8     0x4be8     com.apple.driver.AppleT6041CLPC (1) CF8C805E-3CC6-37DA-8BB4-59E7122F31F2 <122 36 28 26 14 9 8 7 6 5 3>
+  161    0 0xfffffe00075c6450 0x115bf    0x115bf    com.apple.driver.ApplePassthroughPPM (3.0) A1AF087A-6103-3E82-AE03-A47A4C3D4283 <122 28 26 14 9 7 6 5 3>
+  162    0 0xfffffe00073b4c70 0x17b0     0x17b0     com.apple.driver.AppleDPDisplayTCON (1) 304228CD-FAE9-313E-B28F-426BE9D59433 <127 35 28 9 8 7 6 5 3>
+  163    4 0xfffffe00077931c0 0x3dbd     0x3dbd     com.apple.driver.ExclavesAudioKext (300.59) 1215C411-21DB-3A05-B295-D3D58630C1A2 <9 8 7 6 5>
+  164    1 0xfffffe00077e2f20 0xb47      0xb47      com.apple.driver.IISAudioIsolatedStreamECProxy (500.18) 0E1BB834-8F1B-3D90-9867-A499329A4D87 <163 87 28 9 8 7 6 5>
+  165    4 0xfffffe0007144910 0x5e98     0x5e98     com.apple.iokit.AppleARMIISAudio (500.18) DA60991F-5258-30C2-BD53-9F42D0AB635A <164 87 32 9 8 7 6 5 3>
+  166    3 0xfffffe00073db740 0x7e44     0x7e44     com.apple.driver.AppleEmbeddedAudio (900.87) 99597995-0A0C-3E94-B839-ABC2B52AAF8A <165 87 38 32 31 28 9 7 6 5 3>
+  167    0 0xfffffe00073e8df0 0xa88      0xa88      com.apple.driver.AppleSN012776Amp (900.87) 81A304AC-CE7C-32C8-A009-B0880701B28D <166 165 38 32 31 28 9 7 6 5 3>
+  168    1 0xfffffe0007383a90 0xe80      0xe80      com.apple.driver.AppleCSEmbeddedAudio (900.87) 50C6868E-12B8-389F-9088-7195E8CE6EA7 <166 165 38 32 31 28 7 6 5 3>
+  169    0 0xfffffe00073e3590 0x585f     0x585f     com.apple.driver.AppleCS42L84Audio (900.87) D3705AEE-54A1-3078-B8AA-24E82AA9D3E6 <168 166 165 38 32 31 28 9 7 6 5 3>
+  170    6 0xfffffe00074c5e40 0x2c1a     0x2c1a     com.apple.driver.AppleInputDeviceSupport (9000.27) 6C9CCF99-06A4-3EA8-B4A2-D2AD76A93BFE <86 40 19 8 7 6 5 3>
+  171    3 0xfffffe000761f670 0x5e70     0x5e70     com.apple.driver.AppleSPU (1) E39448E0-3F05-3E7C-B283-CE1625DFDD31 <86 48 41 40 38 28 26 19 8 7 6 5 3>
+  172    2 0xfffffe0007481060 0xd240     0xd240     com.apple.driver.AppleHIDTransport (9000.27) A1543637-5A9D-31C4-B8B2-D3B388BD7303 <171 170 64 38 28 8 7 6 5 3>
+  173    1 0xfffffe0007491490 0xcff      0xcff      com.apple.driver.AppleHIDTransportSCMCommon (9000.27) 72EAACAC-A0F8-3B69-9790-69D7552FC98C <172 170 48 41 40 28 8 7 6 5 3>
+  174    0 0xfffffe000748e2a0 0x31e7     0x31e7     com.apple.driver.AppleHIDTransportFIFO (9000.27) B8A45816-A815-325D-983A-A328D96EDB32 <173 172 170 114 48 40 28 8 7 6 5 3>
+  175    0 0xfffffe000772df00 0x25c3     0x25c3     com.apple.driver.AppleTypeCRetimer (1.0.0) F7D026E3-41F9-3EBB-95D4-99A9CF7F9D49 <28 9 8 7 6 5 3>
+  176    0 0xfffffe00075e4a10 0x6688     0x6688     com.apple.driver.AppleProcessorTrace (1.0.0) 63165AEF-8208-368B-9AB8-FDFC263AFC3C <28 9 8 7 6 5 3>
+  177    1 0xfffffe00077478a0 0x613      0x613      com.apple.driver.AudioDMACLLTEscalationDetector-Stub (500.88) 5B8935B7-4190-3A56-B670-0E00B04CB33C <87 28 8 7 6 5 3>
+  178    2 0xfffffe0007750130 0x1a40     0x1a40     com.apple.driver.AudioDMAFamily (500.88) 23937FDB-2CFE-3E12-84C7-A8B5F023D080 <8 7 6 5 3>
+  179    1 0xfffffe0007b2e4e0 0x1031     0x1031     com.apple.driver.AudioSharedDARTMapperProxy (300.59) 8E9D278E-3513-32D8-9A8B-84D5BA595B3B <163 87 28 9 8 7 6 5>
+  180    1 0xfffffe0007784420 0xc05      0xc05      com.apple.driver.DMAChannelProxy (500.88) 14E2766F-F8F4-3790-BD96-A262BA936CE6 <179 163 87 28 9 8 7 6 5>
+  181    0 0xfffffe0007747ec0 0x8265     0x8265     com.apple.driver.AudioDMAController-T604x (500.88) D0AC3F31-DCA5-3925-B359-524139FE6429 <180 178 177 87 28 8 7 6 5 3>
+  182    0 0xfffffe00073fbea0 0x19f5     0x19f5     com.apple.AppleEmbeddedSimpleSPINORFlasher (1) E398B94C-68C6-3875-9B4F-409D184F2EC6 <28 9 7 6 5 3>
+  183    0 0xfffffe000749a9b0 0x13240    0x13240    com.apple.driver.AppleHPM (3.4.4) D3A305A3-6639-3B20-9E68-55605D6148CA <96 95 67 64 61 35 28 9 8 7 6 5 3>
+  184    0 0xfffffe00075c3410 0xeec      0xeec      com.apple.driver.ApplePMUFirmwareDriver (1.0.0) A68DD1F9-55FA-339C-BE5F-860E408CFBC5 <28 9 8 7 6 5 3>
+  185    1 0xfffffe00073c65c0 0xc16      0xc16      com.apple.driver.AppleDialogPMU (1.0.1) 3F813AE5-F902-3FB0-B688-BE3A957C7EA6 <63 62 38 28 9 7 6 5 3>
+  186    0 0xfffffe000761c9a0 0x2cc6     0x2cc6     com.apple.driver.AppleSPMIPMU (1.0.1) 3C6519FF-BEDD-3B72-A11D-E90D32E88C90 <185 64 63 38 28 9 8 7 6 5 3>
+  187    2 0xfffffe00075a8250 0x61b      0x61b      com.apple.driver.AppleNANDConfigAccess (1.0.0) 6E3AEFC8-31FF-3C03-A79F-F2178F7F46A4 <28 9 7 6 5 3>
+  188    0 0xfffffe00073c5db0 0x808      0x808      com.apple.driver.AppleDiagnosticDataAccessReadOnly (1.0.0) FF8F410E-AAF1-3A05-857C-C5450C0BFB50 <187 28 9 7 6 5 3>
+  189    1 0xfffffe000711cec0 0x4000     0x4000     com.apple.AGXFirmwareKextRTBuddy64 (340.26.3) 8308DA46-C498-3B69-A16C-881BF3D14878 <48 7 6 5 3>
+  190    0 0xfffffe000711c000 0xebb      0xebb      com.apple.AGXFirmwareKextG16XRTBuddy (1) 9CB199CE-1950-3F21-B39D-4876A8C5AC29 <189 48 7 6 5 3>
+  191    0 0xfffffe0007638e30 0x4820     0x4820     com.apple.driver.AppleStockholmControl (1.0.0) A6CDFD9B-884F-3CD4-97AA-ACD77BA35C1A <60 28 9 8 7 6 5 3>
+  192    0 0xfffffe000797e890 0xf8f5     0xf8f5     com.apple.iokit.IONVMeFamily (2.1.0) 4BFB7BC3-131D-3DD0-993F-4C3C4A4D377B <187 100 69 64 48 41 40 38 28 22 20 10 9 8 7 6 5 3>
+  193    0 0xfffffe0007633fe0 0x4e50     0x4e50     com.apple.driver.AppleSmartIO2 (1) 0771A14B-3C36-392D-8D3E-F5A59A87ABB8 <48 41 40 16 8 7 6 5 3>
+  194    1 0xfffffe0007783840 0xbd8      0xbd8      com.apple.driver.DCPDPFamilyProxy (1) AFBB1CF6-FD6D-3626-AC0B-4C00FE4141B0 <128 127 95 35 5>
+  195    0 0xfffffe00073b2b80 0x20e6     0x20e6     com.apple.driver.AppleDCPDPTXProxy (1.0.0) 80A38C87-A454-33F2-BDEE-E892B791119B <194 131 128 127 95 67 61 35 34 7 6 5>
+  196    0 0xfffffe00075c2a20 0x9e1      0x9e1      com.apple.driver.ApplePMPFirmware (1) 374F4790-BC40-32BE-BC07-AE118F9F3CE4 <48 41 40 28 8 6 5>
+  197    0 0xfffffe0007627f10 0x1eb8     0x1eb8     com.apple.driver.AppleSSE (1.0) D727485D-5BF1-3FB5-8A27-4CD9BDB01EA5 <43 40 9 8 7 6 5 3>
+  198    1 0xfffffe0007a4d950 0x24762    0x24762    com.apple.plugin.IOgPTPPlugin (1400.62) CA701C5D-4501-37A3-A796-EC4A7D1053D5 <80 52 50 38 14 8 7 6 5 3>
+  199    0 0xfffffe0007138020 0x16ad     0x16ad     com.apple.driver.AOPAudio2 (300.4) BABD4DFA-8C51-3636-941C-7E59756D87DB <171 88 87 28 7 6 5 3>
+  200    0 0xfffffe00079abea0 0x4c0f     0x4c0f     com.apple.driver.IOPAudioVoiceTriggerDevice (500.14) F53D2540-3F08-35AD-A71F-451EB90BE535 <163 88 87 8 7 6 5 3>
+  201    0 0xfffffe00075c0ea0 0x1b7c     0x1b7c     com.apple.driver.ApplePMP (1) 727E19DC-C064-3936-B76D-9F9B68DDF7A7 <48 41 40 38 28 8 7 6 5 3>
+  202    0 0xfffffe0007404b60 0xb0d      0xb0d      com.apple.AppleFSCompression.AppleFSCompressionTypeDataless (1.0.0d1) 395241F2-D35B-3BCD-8865-234F23A19A4B <9 8 6 5 4 3>
+  203    0 0xfffffe0007405670 0x401b     0x401b     com.apple.AppleFSCompression.AppleFSCompressionTypeZlib (1.0.0) 8CCBDF3C-E3C7-3C20-887B-06577DB94EAB <8 6 5 4 3>
+  204    0 0xfffffe0007642380 0x1183     0x1183     com.apple.driver.AppleSyntheticGameController (13.0.39) 5DB86F99-EB45-3F5B-80A1-AC40957FB7C0 <38 8 6 5>
+  205    0 0xfffffe00077662b0 0x1ede     0x1ede     com.apple.BootCache (40) B173F3B3-8304-3D8A-9DF2-E7DDC2EF57E1 <9 8 7 6 5 3>
+  206    0 0xfffffe0007768190 0x1e6e     0x1e6e     com.apple.security.BootPolicy (1) F572E612-10E8-3EF0-A193-CFAA138B9D8A <43 40 8 7 6 5>
+  207    1 0xfffffe00077e23c0 0xb5f      0xb5f      com.apple.filesystems.hfs.encodings.kext (1) 46555A22-9CCE-3611-8E7B-E7BF6CE41289 <9 8 7 6 5 3>
+  208    0 0xfffffe00077d5ab0 0xc90e     0xc90e     com.apple.filesystems.hfs.kext (704.0.3) 85792601-A121-33B5-8BA9-843480C78E76 <207 9 8 7 6 5 3>
+  209    1 0xfffffe0007384910 0x1696     0x1696     com.apple.driver.AppleCallbackPowerSource (1) B297C131-2A39-3A0B-9B01-E9F4BCD3ECB2 <8 7 6 5 3>
+  210    1 0xfffffe0007969870 0x12f7     0x12f7     com.apple.driver.IOHIDPowerSource (1) BA39E1D7-D4EA-32B6-AF51-E7EE1C3A6B3A <209 38 8 7 6 5 3>
+  211    0 0xfffffe00079d9790 0x887      0x887      com.apple.IOTextEncryptionFamily (1.0.0) 26D4F7F3-DC29-3026-8509-862969EEA820 <29 9 7 6 5 3>
+  212    0 0xfffffe0007ac39e0 0x11e1     0x11e1     com.apple.driver.usb.AppleUSBHostPacketFilter (1.0) 8D23CE6C-45BD-3AFF-9258-AEDCBB5DE13F <68 65 9 8 7 6 5 3>
+  213    2 0xfffffe0007b7aef0 0x55c0d    0x55c0d    com.apple.filesystems.apfs (2632.0.84) C866A0FC-776A-3AF7-9CFF-291B70DC59C9 <46 22 19 18 10 9 8 7 6 5 4 3>
+  214    0 0xfffffe0007bff0f0 0x3fd0     0x3fd0     com.apple.filesystems.lifs (1) A65B732B-2978-3CD2-A76A-99BC0011AF6C <9 8 7 6 5 3>
+  215    2 0xfffffe0007c2d840 0x9d0      0x9d0      com.apple.kext.triggers (1.0) FBE15AD4-EA36-3C07-81BE-460A8240C1D4 <9 8 7 6 5 3>
+  216    0 0xfffffe0007c05cd0 0xa714     0xa714     com.apple.filesystems.nfs (1) 2CAA5AE4-D319-3499-9727-8ADCA2FC9336 <215 10 9 8 7 6 5 3>
+  217    0 0xfffffe00073684c0 0x68a      0x68a      com.apple.driver.AppleBSDKextStarter (3) 3865CF18-32BA-3C90-AD7C-478313F7DD52 <6 5>
+  218    0 0xfffffe00074b06a0 0x3b9c     0x3b9c     com.apple.driver.AppleIOPADMAStream (300.8) 19821747-E596-3FFB-9744-AE1284F2B00E <178 88 87 31 30 28 9 8 7 6 5 3>
+  219    1 0xfffffe00079a00c0 0x1e40     0x1e40     com.apple.driver.IOPAudioClientManagerDevice (300.21) B4E006DE-9B3D-3FDC-85BE-04CF122DE53B <88 28 8 7 6 5 3>
+  220    0 0xfffffe00079a8080 0x1179     0x1179     com.apple.driver.IOPAudioIOBufferDevice (300.21) 8D9FF507-AFA2-311B-B76D-75139CF7087A <88 28 8 7 6 5 3>
+  221    0 0xfffffe00079a9200 0x2ca0     0x2ca0     com.apple.driver.IOPAudioLPMicDevice (300.21) FA2A43A5-F33E-3B22-A112-B1CC952B4454 <219 88 8 7 6 5 3>
+  222    1 0xfffffe0007785030 0xe54      0xe54      com.apple.EXBrightCalibrationConsumer (1.0.0) F9277C66-07DE-3DC2-AA7B-0A068D4D95C4 <38 9 8 7 6 5>
+  223    0 0xfffffe00071409d0 0x3f31     0x3f31     com.apple.driver.AppleALSColorSensor (1.0.0d1) 02E8D626-783A-32A5-85EB-6D54715EBD9A <222 171 38 28 9 7 6 5 3>
+  224    0 0xfffffe0007c2cb10 0xd2a      0xd2a      com.apple.filesystems.tmpfs (1) 578466A7-09B0-3B8C-B97C-84B074545EE5 <9 8 7 6 5 3>
+  225    1 0xfffffe0007af5d80 0x2170     0x2170     com.apple.nke.ppp (1.9) F9501DF2-3E7F-3843-AD4B-09055AC28FAB <9 8 7 6 5 3>
+  226    0 0xfffffe0007aedbf0 0x1108     0x1108     com.apple.nke.l2tp (1.9) 197B4D4A-989E-3D5C-B0D7-E7827B4DFF4B <225 9 8 7 6 5 3>
+  227    0 0xfffffe0007409690 0x895      0x895      com.apple.driver.AppleFileSystemDriver (3.0.1) 17C9CA6C-3A13-36A6-832F-2017EA2148CE <22 6 5>
+  228    1 0xfffffe0007741090 0x848      0x848      com.apple.driver.usb.networking (5.0.0) 143D8AD9-7B44-3D1F-ACEF-D90D623471FA <68 50 8 7 6 5 3>
+  229    0 0xfffffe000773b740 0x118b     0x118b     com.apple.driver.AppleUSBDeviceNCM (5.0.0) 0EA0BC98-4827-346D-BD3A-CC2213B65F91 <228 142 50 28 8 7 6 5 3>
+  230    0 0xfffffe0007705dd0 0x1856     0x1856     com.apple.driver.AppleThunderboltPCIDownAdapter (4.1.1) E22CEE6A-CEA4-33FD-B717-24051A8D6C3E <100 96 69 7 6 5 3>
+  231    1 0xfffffe000766f890 0xddf0     0xddf0     com.apple.driver.AppleThunderboltDPAdapterFamily (8.5.1) EACA54A2-615F-3110-8474-33839C20B3D7 <96 7 6 5 3>
+  232    0 0xfffffe000767d680 0x282b     0x282b     com.apple.driver.AppleThunderboltDPInAdapter (8.5.1) 72BAC565-939D-3D14-9F23-CE4B175C74F4 <231 96 7 6 5 3>
+  233    0 0xfffffe000770be40 0xb91      0xb91      com.apple.driver.AppleThunderboltUSBDownAdapter (1.0.4) 24D0B903-8A84-37A5-A982-DD1563793583 <96 7 6 5 3>
+  234    0 0xfffffe000769e960 0x2c9b2    0x2c9b2    com.apple.driver.AppleThunderboltIP (4.0.3) 0E198BFD-FA81-3F73-A4C5-E9C44099F6D8 <96 69 50 7 6 5 3>
+  235    0 0xfffffe0007746ea0 0xa00      0xa00      com.apple.driver.AppleXsanScheme (3) 0AC6D857-9621-3C8A-AFB6-F94C5F886710 <22 7 6 5 3>
+  236    1 0xfffffe00072d55b0 0x4360     0x4360     com.apple.driver.AppleAuthCP (1.0.0) 0BE381BD-E4CE-3EC2-929B-6AD8625176A5 <67 64 61 28 9 8 7 6 5 3>
+  237    0 0xfffffe000762b660 0x897a     0x897a     com.apple.driver.AppleSmartBatteryManager (161.0.0) 2FC7BCBB-4E70-3BD3-BD44-56446DCD9B89 <236 64 9 8 7 6 5 3>
+  238    0 0xfffffe0007368b50 0x5286     0x5286     com.apple.driver.AppleBTM (1.0.1) 42CE05CA-B2C0-3933-BF74-0E37E3A3E39E <210 122 64 38 28 9 7 6 5 3>
+  239    0 0xfffffe000737a270 0x1f90     0x1f90     com.apple.driver.AppleBluetoothDebug (1) C74E33C4-D669-34FA-817A-BBB11EDC51C2 <106 101 8 7 6 5 3>
+  240    1 0xfffffe000738e820 0x7b09     0x7b09     com.apple.driver.AppleConvergedPCI (1) 7B404F0C-22BF-3744-90BD-65A1BEB363C4 <101 69 8 7 6 5 3>
+  241    0 0xfffffe0007385fb0 0x8870     0x8870     com.apple.driver.AppleConvergedIPCOLYBTControl (1) 3ECA416D-3619-3756-8AC1-EF7A542F08E2 <240 106 52 8 7 6 5 3>
+  242    0 0xfffffe0007b044d0 0x1108     0x1108     com.apple.driver.SEPHibernation (1) 4C55294E-AC5D-31F4-8C27-9D27F3F9EDC7 <43 40 6 5>
+  243    4 0xfffffe00075f99e0 0x1365     0x1365     com.apple.iokit.AppleSEPGenericTransfer (1) B2BCE735-E2E4-308D-8822-9A7D4C5F74F1 <43 40 8 7 6 5>
+  244    1 0xfffffe0007714220 0x7e4b     0x7e4b     com.apple.driver.AppleTrustedAccessory (1) 482B0192-9583-3F4B-8B2B-4D8F4F69A4D8 <243 64 38 19 9 8 7 6 5 3>
+  245    0 0xfffffe00075fad50 0x13d5     0x13d5     com.apple.driver.AppleSEPHDCPManager (1.0.1) 9A0E2B14-C021-30DC-AFA1-72283691BBD3 <43 40 34 7 6 5>
+  246    4 0xfffffe00079593f0 0xd4d      0xd4d      com.apple.driver.DiskImages.KernelBacked (493.0.0) DA6910CE-4EEC-3F58-8AF0-F41838CB4DD8 <78 22 9 7 6 5 3>
+  247    0 0xfffffe0007958be0 0x80f      0x80f      com.apple.driver.DiskImages.FileBackingStore (493.0.0) 56A0E9D7-4967-3DCD-9E70-1B8FB955DF7D <246 78 22 9 8 7 6 5 3>
+  248    0 0xfffffe000795a140 0x6a0      0x6a0      com.apple.driver.DiskImages.RAMBackingStore (493.0.0) FD5881ED-2B1D-38EE-B62B-E04EDA874A42 <246 78 22 9 7 6 5 3>
+  249    0 0xfffffe000795ae00 0x39d8     0x39d8     com.apple.driver.DiskImages.UDIFDiskImage (493.0.0) 0CA763B7-3541-3E39-B88C-D4DEFE742571 <246 78 22 9 7 6 5 3>
+  250    0 0xfffffe000795a7e0 0x620      0x620      com.apple.driver.DiskImages.ReadWriteDiskImage (493.0.0) DC3B20BD-DCEC-3E65-95A5-FA97E79E9828 <246 78 22 9 7 6 5 3>
+  251    0 0xfffffe000789bab0 0xc8a0     0xc8a0     com.apple.iokit.IOAVBFamily (1400.10) 89DEDD9A-DAC6-3E12-B0A6-5FC9F679D552 <198 80 50 8 7 6 5 3>
+  252    2 0xfffffe000790a250 0x3648     0x3648     com.apple.iokit.IOBiometricFamily (1) FC403007-13E0-3599-BDEB-05C76AC2FBE6 <243 43 40 9 8 7 6 5 3>
+  253    1 0xfffffe000756e5b0 0x9029     0x9029     com.apple.driver.AppleMesaSEPDriver (100.99) 80E658D2-762D-3035-A20D-EA310596CF76 <252 244 243 64 43 40 39 38 28 9 8 7 6 5 3>
+  254    0 0xfffffe000776e360 0x2072     0x2072     com.apple.driver.CoreKDL (1) C8E16856-4F40-3B42-BBA4-CEEE85513372 <243 7 6 5 3>
+  255    0 0xfffffe0007379570 0xcfd      0xcfd      com.apple.driver.AppleBiometricServices (1) 59FE7E52-F8BB-31F9-8B54-282CFE576889 <253 252 28 9 7 6 5 3>
+  256    0 0xfffffe000747cd60 0x16a4     0x16a4     com.apple.driver.AppleHIDKeyboard (8010.1) 73F119C1-ACD0-3A55-9EEB-8D3B47917C4B <38 8 7 6 5>
+  257    2 0xfffffe00075a2730 0x5b17     0x5b17     com.apple.driver.AppleMultitouchDriver (9400.24) 37F40312-EED7-3152-8716-F3C8B8006C56 <170 38 26 9 8 7 6 5 3>
+  258    0 0xfffffe00072d30f0 0x1c75     0x1c75     com.apple.driver.AppleActuatorDriver (9400.24) 2B8A1E07-6B52-3C99-AB95-0FDEBF947B1D <257 170 38 26 9 8 7 6 5 3>
+  259    0 0xfffffe00077112f0 0x2744     0x2744     com.apple.driver.AppleTopCaseHIDEventDriver (9400.15) 8CB4CC99-A5FA-33AF-9599-AB5F9F1B00B4 <257 170 38 8 7 6 5 3>
+  262    0 0xfffffe0007aebad0 0x9d8      0x9d8      com.apple.driver.driverkit.serial (6.0.0) 2D3AF2D3-DCD3-3C5F-92CE-93115E5066D0 <59 7 6 5 3>
+  264    0 0xfffffe0007bd3a50 0x1727     0x1727     com.apple.filesystems.autofs (3.0) FB1D8255-93D2-3EB0-8AE3-83ED61577D26 <215 9 8 7 6 5 4 3>
+Anthonys-MacBook-Pro:~ root# bputil -d
+
+Current local policy:
+OS environment:
+OS Type                                       : macOS
+OS Pairing Status                             : Not Paired
+Local Policy Nonce Hash                 (lpnh): 8FF386F4BD79AA430172B7ACD19C971B923E74E8BE9ED49BFF53BE6F8E66301E824B5241515D32C6EFA4D25E7FCD24EC
+Remote Policy Nonce Hash                (rpnh): 7AE501E8E0CDBE4B88B070AA3C31D459A2AB4A2A28110D2891914294C9B37A3DB275AEEC51C8C32EB5079A18F2AC0AD1
+Recovery OS Policy Nonce Hash           (ronh): 634881D5CCE515BA5EA67530B3754F9E597E73C17C3BBF4C4D535600299B40B1DA142807EB73959A173700D077604CEB
+
+Local policy:
+Pairing Integrity                             : Valid
+Signature Type                                : BAA
+Unique Chip ID                          (ECID): 0x1A60E6368A801C
+Board ID                                (BORD): 0x4
+Chip ID                                 (CHIP): 0x6040
+Certificate Epoch                       (CEPO): 0x1
+Security Domain                         (SDOM): 0x1
+Production Status                       (CPRO): 1
+Security Mode                           (CSEC): 1
+Local Boot                              (lobo): 1
+OS Version                              (love): 25.1.354.0.0,0
+Volume Group UUID                       (vuid): DF86831E-6D17-43B1-B046-7609DBDF5151
+KEK Group UUID                          (kuid): 5E7922E1-BF8E-421B-BFC4-55C9B6FE028A
+Local Policy Nonce Hash                 (lpnh): 8FF386F4BD79AA430172B7ACD19C971B923E74E8BE9ED49BFF53BE6F8E66301E824B5241515D32C6EFA4D25E7FCD24EC
+Remote Policy Nonce Hash                (rpnh): 7AE501E8E0CDBE4B88B070AA3C31D459A2AB4A2A28110D2891914294C9B37A3DB275AEEC51C8C32EB5079A18F2AC0AD1
+Next Stage Image4 Hash                  (nsih): C0AF778813A1F0E0C7D0CC1A93F7097F72B4FADDA51C1D2877310C9041EE03F6E725ACFA691A083B3A0CE1F726B7CB8F
+Cryptex1 Image4 Hash                    (spih): 122D39E730409122F82B8259E02E115A17D6B21F604E6D14C1114A8C4153B3AA4BFB22C6692A2978A2051E49B6B9A9A2
+Cryptex1 Generation                     (stng): 7
+User Authorized Kext List Hash          (auxp): absent
+Auxiliary Kernel Cache Image4 Hash      (auxi): absent
+Kext Receipt Hash                       (auxr): absent
+CustomKC or fuOS Image4 Hash            (coih): absent
+Security Mode:               Full       (smb0): absent
+3rd Party Kexts Status:      Disabled   (smb2): absent
+User-allowed MDM Control:    Disabled   (smb3): absent
+DEP-allowed MDM Control:     Disabled   (smb4): absent
+SIP Status:                  Enabled    (sip0): absent
+Signed System Volume Status: Enabled    (sip1): absent
+Kernel CTRR Status:          Enabled    (sip2): absent
+Boot Args Filtering Status:  Enabled    (sip3): absent
+Anthonys-MacBook-Pro:~ root# /usr/bin/sealed_system_volume_status
+-sh: /usr/bin/sealed_system_volume_status: No such file or directory
+Anthonys-MacBook-Pro:~ root# pkgutil --check-signature /System/Volumes/Preboot/Cryptexes/App/usr/libexec/oah
+Package does not exist: /System/Volumes/Preboot/Cryptexes/App/usr/libexec/oah
+Anthonys-MacBook-Pro:~ root# ls -l /System/Library/Security/Certificates.bundle/Contents/Resources/
+total 26200
+-rw-r--r--    1 root  wheel      2053 Sep  9 02:15 AnalyticsSamplingRates.plist
+drwxr-xr-x  288 root  wheel      9216 Sep  9 02:15 Anchors
+-rw-r--r--    1 root  wheel     74407 Sep  9 02:15 Anchors.plist
+-rw-r--r--    1 root  wheel       898 Sep  9 02:15 AppleCertificateAuthorities.plist
+-rw-r--r--    1 root  wheel       371 Sep  9 02:15 AssetVersion.plist
+-rw-r--r--    1 root  wheel     89048 Sep  9 02:15 CertificatePinning.plist
+-rw-r--r--    1 root  wheel      3744 Sep  9 02:15 certsIndex.data
+-rw-r--r--    1 root  wheel    169440 Sep  9 02:15 certsTable.data
+-rw-r--r--    1 root  wheel      3122 Sep  9 02:15 EVRoots.plist
+-rw-r--r--    1 root  wheel       292 Sep  9 02:15 manifest.data
+-rw-r--r--    1 root  wheel     21108 Sep  9 02:15 TrustedCTLogs_nonTLS.plist
+-rw-r--r--    1 root  wheel     22452 Sep  9 02:15 TrustedCTLogs.plist
+-rw-r--r--    1 root  wheel     57947 Sep  9 02:15 TrustStore.html
+-rw-r--r--    1 root  wheel  14245888 Sep  9 02:15 valid.sqlite3
+-rw-r--r--    1 root  wheel       317 Sep  9 02:15 ValidUpdate.plist
+Anthonys-MacBook-Pro:~ root# ls -l /Library/Apple/System/Library/Security/Certificates.bundle/Contents/Resources/
+ls: /Library/Apple/System/Library/Security/Certificates.bundle/Contents/Resources/: No such file or directory
+Anthonys-MacBook-Pro:~ root# 
+Anthonys-MacBook-Pro:~ root# apfs.util 
+-sh: apfs.util: command not found
+Anthonys-MacBook-Pro:~ root# which "apfs.util"
+Anthonys-MacBook-Pro:~ root# sudo /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util -p -s 473337CB-BE10-4C04-A025-9A54FC85108B /dev/disk3s3s1 ; echo "exit code = $?"
+exit code = 254
+Anthonys-MacBook-Pro:~ root# which bputil
+/usr/bin/bputil
+Anthonys-MacBook-Pro:~ root# odesign -dv --verbose=4 /usr/bin/bputil
+-sh: odesign: command not found
+Anthonys-MacBook-Pro:~ root# codesign -dv --verbose=4 /usr/bin/bputil
+Executable=/usr/bin/bputil
+Identifier=com.apple.bputil
+Format=Mach-O universal (x86_64 arm64e)
+CodeDirectory v=20400 size=1353 flags=0x2000(library-validation) hashes=32+7 location=embedded
+Platform identifier=26
+VersionPlatform=1
+VersionMin=1703936
+VersionSDK=1703936
+Hash type=sha256 size=32
+CandidateCDHash sha256=cf775e61e7a06bc65bb6a4e84041427e6e70b162
+CandidateCDHashFull sha256=cf775e61e7a06bc65bb6a4e84041427e6e70b162ea4a2636a7b8c9f2db957469
+Hash choices=sha256
+CMSDigest=cf775e61e7a06bc65bb6a4e84041427e6e70b162ea4a2636a7b8c9f2db957469
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=81920
+Executable Segment flags=0x1
+Page size=4096
+CDHash=cf775e61e7a06bc65bb6a4e84041427e6e70b162
+Signature size=4442
+Authority=Software Signing
+Authority=Apple Code Signing Certification Authority
+Authority=Apple Root CA
+Signed Time=Aug 6, 2025 at 12:48:21 AM
+Info.plist=not bound
+TeamIdentifier=not set
+Sealed Resources=none
+Internal requirements count=1 size=64
+Anthonys-MacBook-Pro:~ root# codesign -dv --verbose=4 /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.uti
+/System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.uti: No such file or directory
+Anthonys-MacBook-Pro:~ root# codesign -dv --verbose=4 /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util
+Executable=/System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util
+Identifier=com.apple.apfs
+Format=Mach-O universal (x86_64 arm64e)
+CodeDirectory v=20400 size=871 flags=0x0(none) hashes=17+7 location=embedded
+Platform identifier=26
+VersionPlatform=1
+VersionMin=720896
+VersionSDK=1703936
+Hash type=sha256 size=32
+CandidateCDHash sha256=274f8b23e1ab4a9cc85b32bcb18e7b00a0181968
+CandidateCDHashFull sha256=274f8b23e1ab4a9cc85b32bcb18e7b00a01819680d35807e8727b19ce7c13f1c
+Hash choices=sha256
+CMSDigest=274f8b23e1ab4a9cc85b32bcb18e7b00a01819680d35807e8727b19ce7c13f1c
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=32768
+Executable Segment flags=0x1
+Page size=4096
+CDHash=274f8b23e1ab4a9cc85b32bcb18e7b00a0181968
+Signature size=4442
+Authority=Software Signing
+Authority=Apple Code Signing Certification Authority
+Authority=Apple Root CA
+Signed Time=Aug 6, 2025 at 12:16:54 AM
+Info.plist=not bound
+TeamIdentifier=not set
+Sealed Resources=none
+Internal requirements count=1 size=64
+Anthonys-MacBook-Pro:~ root# diskutil apfs list
+APFS Containers (3 found)
+|
++-- Container disk3 37D85E51-7B64-41F1-85E3-515DBD70CBE4
+    ====================================================
+    APFS Container Reference:     disk3
+    Size (Capacity Ceiling):      994662584320 B (994.7 GB)
+    Capacity In Use By Volumes:   256294551552 B (256.3 GB) (25.8% used)
+    Capacity Not Allocated:       738368032768 B (738.4 GB) (74.2% free)
+    |
+    +-< Physical Store disk0s2 F855EEA8-4C73-4A3B-842F-E125AB51850D
+    |   -----------------------------------------------------------
+    |   APFS Physical Store Disk:   disk0s2
+    |   Size:                       994662584320 B (994.7 GB)
+    |
+    +-> Volume disk3s1 DF86831E-6D17-43B1-B046-7609DBDF5151
+    |   ---------------------------------------------------
+    |   APFS Volume Disk (Role):   disk3s1 (Data)
+    |   Name:                      Macintosh HD - Data (Case-insensitive)
+    |   Mount Point:               /System/Volumes/Data
+    |   Capacity Consumed:         229631688704 B (229.6 GB)
+    |   Sealed:                    No
+    |   FileVault:                 Yes (Unlocked)
+    |
+    +-> Volume disk3s3 AD18D4A1-34BC-4D28-9ED6-F32C3AC73270
+    |   ---------------------------------------------------
+    |   APFS Volume Disk (Role):   disk3s3 (System)
+    |   Name:                      Macintosh HD (Case-insensitive)
+    |   Mount Point:               Not Mounted
+    |   Capacity Consumed:         12037021696 B (12.0 GB)
+    |   Sealed:                    Yes
+    |   FileVault:                 Yes (Unlocked)
+    |   Encrypted:                 No
+    |   |
+    |   Snapshot:                  473337CB-BE10-4C04-A025-9A54FC85108B
+    |   Snapshot Disk:             disk3s3s1
+    |   Snapshot Mount Point:      /
+    |   Snapshot Sealed:           Yes
+    |
+    +-> Volume disk3s4 C747F4E9-254A-4885-A615-630C4CCA8451
+    |   ---------------------------------------------------
+    |   APFS Volume Disk (Role):   disk3s4 (Preboot)
+    |   Name:                      Preboot (Case-insensitive)
+    |   Mount Point:               /System/Volumes/Preboot
+    |   Capacity Consumed:         8803741696 B (8.8 GB)
+    |   Sealed:                    No
+    |   FileVault:                 No
+    |
+    +-> Volume disk3s5 90844A77-0B84-4538-A424-555543E2CF2A
+    |   ---------------------------------------------------
+    |   APFS Volume Disk (Role):   disk3s5 (Recovery)
+    |   Name:                      Recovery (Case-insensitive)
+    |   Mount Point:               Not Mounted
+    |   Capacity Consumed:         2344550400 B (2.3 GB)
+    |   Sealed:                    No
+    |   FileVault:                 No
+    |
+    +-> Volume disk3s6 8278C30F-4248-4676-B483-9DC5915CC237
+        ---------------------------------------------------
+        APFS Volume Disk (Role):   disk3s6 (VM)
+        Name:                      VM (Case-insensitive)
+        Mount Point:               /System/Volumes/VM
+        Capacity Consumed:         3221245952 B (3.2 GB)
+        Sealed:                    No
+        FileVault:                 No
