@@ -1,0 +1,3 @@
+<dictionary> {
+  FTPPassive : 1
+}

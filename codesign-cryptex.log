@@ -1,0 +1,1447 @@
+Last login: Fri Oct  3 13:41:06 on ttys000
+avespoli@Anthonys-MacBook-Pro ~ % sudo find /System/Volumes/Preboot/Cryptexes -type f -perm -111 \
+  -exec sh -c '
+    for f do
+      echo "=== $f ==="
+      codesign -dv --verbose=4 "$f" 2>&1 | grep -E "Identifier|TeamIdentifier|CDHash"
+      spctl --assess --type exec --verbose=4 "$f" 2>&1
+      echo
+    done
+  ' sh {} +
+
+Password:
+=== /System/Volumes/Preboot/Cryptexes/App/usr/bin/safaridriver ===
+Identifier=com.apple.safaridriver
+CandidateCDHash sha256=ddaf3a6c8af187720ff47ec8bf230e830f1a220a
+CandidateCDHashFull sha256=ddaf3a6c8af187720ff47ec8bf230e830f1a220a9bcb1ac7e3163d82cbd865b2
+CDHash=ddaf3a6c8af187720ff47ec8bf230e830f1a220a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/bin/safaridriver: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariHistoryServiceAgent ===
+Identifier=com.apple.SafariHistoryServiceAgent
+CandidateCDHash sha256=89fa84a193533b57e4d2d2ed96b207aaf7bc68a0
+CandidateCDHashFull sha256=89fa84a193533b57e4d2d2ed96b207aaf7bc68a003bc4a5dfb756b46a99d8293
+CDHash=89fa84a193533b57e4d2d2ed96b207aaf7bc68a0
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariHistoryServiceAgent: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/usr/libexec/webpushd ===
+Identifier=com.apple.webpushd
+CandidateCDHash sha256=51d86823072ae40a318a43860d00d1712a386946
+CandidateCDHashFull sha256=51d86823072ae40a318a43860d00d1712a38694682b357c738d5b794bee450cb
+CDHash=51d86823072ae40a318a43860d00d1712a386946
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/webpushd: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariNotificationAgent ===
+Identifier=com.apple.SafariNotificationAgent
+CandidateCDHash sha256=dedd75d60737a5355e88380232e408001748eae0
+CandidateCDHashFull sha256=dedd75d60737a5355e88380232e408001748eae0ff7c0ce28dc37ac36bf17bd1
+CDHash=dedd75d60737a5355e88380232e408001748eae0
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariNotificationAgent: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariLaunchAgent ===
+Identifier=com.apple.SafariLaunchAgent
+CandidateCDHash sha256=37c4026d6057083adf60fcb618aeed5da8d6b1b9
+CandidateCDHashFull sha256=37c4026d6057083adf60fcb618aeed5da8d6b1b9c96cb5ee33a2ba0913d19290
+CDHash=37c4026d6057083adf60fcb618aeed5da8d6b1b9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/SafariLaunchAgent: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/usr/libexec/webinspectord ===
+Identifier=com.apple.webinspectord
+CandidateCDHash sha256=94e6d9b0ba0a4d96755168b525986766ec870a84
+CandidateCDHashFull sha256=94e6d9b0ba0a4d96755168b525986766ec870a84214ac0373a07ece76e45f4b2
+CDHash=94e6d9b0ba0a4d96755168b525986766ec870a84
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/webinspectord: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/usr/libexec/com.apple.Safari.History ===
+Identifier=com.apple.Safari.History
+CandidateCDHash sha256=3fb77e38e560b64d5d62f4783d79d277378ff958
+CandidateCDHashFull sha256=3fb77e38e560b64d5d62f4783d79d277378ff9587cceeac13ffcfd47c4a2b2d9
+CDHash=3fb77e38e560b64d5d62f4783d79d277378ff958
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/com.apple.Safari.History: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/usr/libexec/AuthenticationServicesAgent ===
+Identifier=com.apple.AuthenticationServicesCore.AuthenticationServicesAgent
+CandidateCDHash sha256=18c48a6c7035988ffc38b15cc2d6884380920f46
+CandidateCDHashFull sha256=18c48a6c7035988ffc38b15cc2d6884380920f4612b0df592f7fd66ff9240342
+CDHash=18c48a6c7035988ffc38b15cc2d6884380920f46
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/AuthenticationServicesAgent: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/usr/libexec/PasswordBreachAgent ===
+Identifier=com.apple.Safari.PasswordBreachAgent
+CandidateCDHash sha256=971d4ad6fc9b0a544fe90343b48cba5699644b26
+CandidateCDHashFull sha256=971d4ad6fc9b0a544fe90343b48cba5699644b26be5c2b5ec7f62000079d41dc
+CDHash=971d4ad6fc9b0a544fe90343b48cba5699644b26
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/usr/libexec/PasswordBreachAgent: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Library/Assistant/Plugins/Safari.assistantBundle/Contents/MacOS/Safari ===
+Identifier=com.apple.SafariShared.Assistant
+CandidateCDHash sha256=1e1ce67a24c45115695b406f86884ee73399c758
+CandidateCDHashFull sha256=1e1ce67a24c45115695b406f86884ee73399c7583174e787a90f3fed1dd7913a
+CDHash=1e1ce67a24c45115695b406f86884ee73399c758
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Library/Assistant/Plugins/Safari.assistantBundle/Contents/MacOS/Safari: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/PasswordsSettingsExtension.appex/Contents/MacOS/PasswordsSettingsExtension ===
+Identifier=com.apple.Passwords-Settings.extension
+CandidateCDHash sha256=6d2988945dfc52910d98606931d13de6a8712ca4
+CandidateCDHashFull sha256=6d2988945dfc52910d98606931d13de6a8712ca416f248dc98b1d8e3852210ae
+CDHash=6d2988945dfc52910d98606931d13de6a8712ca4
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/PasswordsSettingsExtension.appex/Contents/MacOS/PasswordsSettingsExtension: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/SafariBookmarksSyncAgent ===
+Identifier=com.apple.SafariBookmarksSyncAgent
+CandidateCDHash sha256=b02cf24852bcfddc09718ec8490160fcac771126
+CandidateCDHashFull sha256=b02cf24852bcfddc09718ec8490160fcac771126cf37ee71f5fc57b66146c7df
+CDHash=b02cf24852bcfddc09718ec8490160fcac771126
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/SafariBookmarksSyncAgent: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/MacOS/Web App ===
+Identifier=com.apple.Safari.WebApp
+CandidateCDHash sha256=d40ae26dbddf7dd611df7724eeaefc6be53a9fe2
+CandidateCDHashFull sha256=d40ae26dbddf7dd611df7724eeaefc6be53a9fe2600d9a11e752303f6b40c9c8
+CDHash=d40ae26dbddf7dd611df7724eeaefc6be53a9fe2
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/MacOS/Web App: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/XPCServices/com.apple.Safari.SandboxBroker.xpc/Contents/MacOS/com.apple.Safari.SandboxBroker ===
+Identifier=com.apple.Safari.SandboxBroker
+CandidateCDHash sha256=8d9f62eb61f2f19f27933ee6f94c297e35bafa01
+CandidateCDHashFull sha256=8d9f62eb61f2f19f27933ee6f94c297e35bafa01f61ccf8b4eae86c759882dfd
+CDHash=8d9f62eb61f2f19f27933ee6f94c297e35bafa01
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/XPCServices/com.apple.Safari.SandboxBroker.xpc/Contents/MacOS/com.apple.Safari.SandboxBroker: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/XPCServices/com.apple.Safari.ContentBlockerLoader.xpc/Contents/MacOS/com.apple.Safari.ContentBlockerLoader ===
+Identifier=com.apple.Safari.ContentBlockerLoader
+CandidateCDHash sha256=d63ffe6df683ce7fd9739f2fecfbee5151e73050
+CandidateCDHashFull sha256=d63ffe6df683ce7fd9739f2fecfbee5151e73050d4fe67ee07772606160ee863
+CDHash=d63ffe6df683ce7fd9739f2fecfbee5151e73050
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/Web App.app/Contents/XPCServices/com.apple.Safari.ContentBlockerLoader.xpc/Contents/MacOS/com.apple.Safari.ContentBlockerLoader: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/PasswordManagerBrowserExtensionHelper.app/Contents/MacOS/PasswordManagerBrowserExtensionHelper ===
+Identifier=com.apple.PasswordManagerBrowserExtensionHelper
+CandidateCDHash sha256=0ed2f4504fc366a13d5c56651048f8a86ebf84b0
+CandidateCDHashFull sha256=0ed2f4504fc366a13d5c56651048f8a86ebf84b0b3550f9aa07ef20a50a50bf0
+CDHash=0ed2f4504fc366a13d5c56651048f8a86ebf84b0
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Library/CoreServices/PasswordManagerBrowserExtensionHelper.app/Contents/MacOS/PasswordManagerBrowserExtensionHelper: accepted
+source=Apple System
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Library/Accounts/Notification/CloudBookmarksAccountsNotifier.bundle/Contents/MacOS/CloudBookmarksAccountsNotifier ===
+Identifier=com.apple.SafariBookmarksSyncAgent.CloudBookmarksAccountsNotifier
+CandidateCDHash sha256=8b420e8230c67c80159a3d3b8852fcd7db876cd2
+CandidateCDHashFull sha256=8b420e8230c67c80159a3d3b8852fcd7db876cd26b45fc6c79af900c8ffdd9a4
+CDHash=8b420e8230c67c80159a3d3b8852fcd7db876cd2
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Library/Accounts/Notification/CloudBookmarksAccountsNotifier.bundle/Contents/MacOS/CloudBookmarksAccountsNotifier: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/MacOS/SafariForWebKitDevelopment ===
+Identifier=com.apple.SafariForWebKitDevelopment
+CandidateCDHash sha256=684ad40d85ad06a034fa55cca68c97d31f80f598
+CandidateCDHashFull sha256=684ad40d85ad06a034fa55cca68c97d31f80f598075a6f8d4171cbff94f9f533
+CDHash=684ad40d85ad06a034fa55cca68c97d31f80f598
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/MacOS/SafariForWebKitDevelopment: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/MacOS/Safari ===
+Identifier=com.apple.Safari
+CandidateCDHash sha256=423adfd20219e06241fedd6346673a6a6cd740fb
+CandidateCDHashFull sha256=423adfd20219e06241fedd6346673a6a6cd740fbaeafa81762fdb6fe998bea40
+CDHash=423adfd20219e06241fedd6346673a6a6cd740fb
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/MacOS/Safari: accepted
+source=Apple System
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/CacheDeleteExtension.appex/Contents/MacOS/CacheDeleteExtension ===
+Identifier=com.apple.Safari.CacheDeleteExtension
+CandidateCDHash sha256=982df40c502a98aefb1c72bddf0cf28199ef4fba
+CandidateCDHashFull sha256=982df40c502a98aefb1c72bddf0cf28199ef4fba76b8e0048955fe6a9d1d8921
+CDHash=982df40c502a98aefb1c72bddf0cf28199ef4fba
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/CacheDeleteExtension.appex/Contents/MacOS/CacheDeleteExtension: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/SafariQuickLookPreview.appex/Contents/MacOS/SafariQuickLookPreview ===
+Identifier=com.apple.Safari.SafariQuickLookPreview
+CandidateCDHash sha256=368560626a6daeed4414ebf29dd28a072931b7c0
+CandidateCDHashFull sha256=368560626a6daeed4414ebf29dd28a072931b7c0cfd2652a5ba7aeb4b8ff578b
+CDHash=368560626a6daeed4414ebf29dd28a072931b7c0
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/SafariQuickLookPreview.appex/Contents/MacOS/SafariQuickLookPreview: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/DiagnosticExtension.appex/Contents/MacOS/DiagnosticExtension ===
+Identifier=com.apple.Safari.DiagnosticExtension
+CandidateCDHash sha256=ce3d5a709cae33c7d729864fa63a26d46801b36a
+CandidateCDHashFull sha256=ce3d5a709cae33c7d729864fa63a26d46801b36aecc9532dffe350a66952d177
+CDHash=ce3d5a709cae33c7d729864fa63a26d46801b36a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/PlugIns/DiagnosticExtension.appex/Contents/MacOS/DiagnosticExtension: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/appdiagnose ===
+Identifier=com.apple.appdiagnose
+CandidateCDHash sha256=8a68b487fe191eaee0bff18e82f5dad0195a3165
+CandidateCDHashFull sha256=8a68b487fe191eaee0bff18e82f5dad0195a31651f4f9550391b95ba8959267d
+CDHash=8a68b487fe191eaee0bff18e82f5dad0195a3165
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/appdiagnose: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Extensions/SafariLinkExtension.appex/Contents/MacOS/SafariLinkExtension ===
+Identifier=com.apple.Safari.SafariLinkExtension
+CandidateCDHash sha256=43203545880b94fbc5b8f1e1d55f1dd6882ccdc3
+CandidateCDHashFull sha256=43203545880b94fbc5b8f1e1d55f1dd6882ccdc3c1550d2be48b4cb051c5eec0
+CDHash=43203545880b94fbc5b8f1e1d55f1dd6882ccdc3
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Extensions/SafariLinkExtension.appex/Contents/MacOS/SafariLinkExtension: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Extensions/SafariWidgetExtension.appex/Contents/MacOS/SafariWidgetExtension ===
+Identifier=com.apple.Safari.SafariWidgetExtension
+CandidateCDHash sha256=ac28e8ecd44be31dcc24ea5a3e49e995d8b4dd1a
+CandidateCDHashFull sha256=ac28e8ecd44be31dcc24ea5a3e49e995d8b4dd1a11096218aeab297f1eec56e9
+CDHash=ac28e8ecd44be31dcc24ea5a3e49e995d8b4dd1a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Extensions/SafariWidgetExtension.appex/Contents/MacOS/SafariWidgetExtension: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.SandboxBroker.xpc/Contents/MacOS/com.apple.Safari.SandboxBroker ===
+Identifier=com.apple.Safari.SandboxBroker
+CandidateCDHash sha256=68b5f71872f2480e0a8cc81856dddc3e89f4a5ba
+CandidateCDHashFull sha256=68b5f71872f2480e0a8cc81856dddc3e89f4a5babf3ad803373ba0bfa630ef4c
+CDHash=68b5f71872f2480e0a8cc81856dddc3e89f4a5ba
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.SandboxBroker.xpc/Contents/MacOS/com.apple.Safari.SandboxBroker: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.ContentBlockerLoader.xpc/Contents/MacOS/com.apple.Safari.ContentBlockerLoader ===
+Identifier=com.apple.Safari.ContentBlockerLoader
+CandidateCDHash sha256=5a9133c18b4e8524e1ed2ac1ef2cd80a2296d367
+CandidateCDHashFull sha256=5a9133c18b4e8524e1ed2ac1ef2cd80a2296d367cbbf4369444c259823317303
+CDHash=5a9133c18b4e8524e1ed2ac1ef2cd80a2296d367
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.ContentBlockerLoader.xpc/Contents/MacOS/com.apple.Safari.ContentBlockerLoader: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.BrowserDataImportingService.xpc/Contents/MacOS/com.apple.Safari.BrowserDataImportingService ===
+Identifier=com.apple.Safari.BrowserDataImportingService
+CandidateCDHash sha256=381f59d4e47606b71a416c699f1c30d357945b75
+CandidateCDHashFull sha256=381f59d4e47606b71a416c699f1c30d357945b753988f43adc6066a3909ad3be
+CDHash=381f59d4e47606b71a416c699f1c30d357945b75
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.BrowserDataImportingService.xpc/Contents/MacOS/com.apple.Safari.BrowserDataImportingService: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/usr/lib/libMainThreadChecker.dylib ===
+Identifier=com.apple.libMainThreadChecker
+CandidateCDHash sha256=dde89b7f01a0cee1855548b6d000587f4fc4623a
+CandidateCDHashFull sha256=dde89b7f01a0cee1855548b6d000587f4fc4623a7d18a446a50280665f9bc975
+CDHash=dde89b7f01a0cee1855548b6d000587f4fc4623a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libMainThreadChecker.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/usr/lib/libLogRedirect.dylib ===
+Identifier=com.apple.libLogRedirect
+CandidateCDHash sha256=34a45a929c2dabb51bc09936c7b83ae6961ad883
+CandidateCDHashFull sha256=34a45a929c2dabb51bc09936c7b83ae6961ad883aeaac1eb12bb3af8107a958a
+CDHash=34a45a929c2dabb51bc09936c7b83ae6961ad883
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libLogRedirect.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_pthread.dylib ===
+Identifier=com.apple.libsystem_pthread
+CandidateCDHash sha256=e8a425f8364332363085e12033f0071e3bbb8eee
+CandidateCDHashFull sha256=e8a425f8364332363085e12033f0071e3bbb8eeee4d281e8f290c86ed10ca113
+CDHash=e8a425f8364332363085e12033f0071e3bbb8eee
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_pthread.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_kernel.dylib ===
+Identifier=com.apple.libsystem_kernel
+CandidateCDHash sha256=950ccd79c57414317619d8fafc23e71748af9b8e
+CandidateCDHashFull sha256=950ccd79c57414317619d8fafc23e71748af9b8ef955c8a7817fd1572687199c
+CDHash=950ccd79c57414317619d8fafc23e71748af9b8e
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_kernel.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_platform.dylib ===
+Identifier=com.apple.libsystem_platform
+CandidateCDHash sha256=3050b87f40fff495bbb74e89972f4fd1160e797a
+CandidateCDHashFull sha256=3050b87f40fff495bbb74e89972f4fd1160e797a3b2c99ef4f25ffb7088c644a
+CDHash=3050b87f40fff495bbb74e89972f4fd1160e797a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/system/libsystem_platform.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/usr/lib/libMTLHud.dylib ===
+Identifier=com.apple.libMTLHud
+CandidateCDHash sha256=8cb4752f84b9ac67f2ae0030df14ef06bc5f20a9
+CandidateCDHashFull sha256=8cb4752f84b9ac67f2ae0030df14ef06bc5f20a9e8804b99f63799f0f707239d
+CDHash=8cb4752f84b9ac67f2ae0030df14ef06bc5f20a9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libMTLHud.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/usr/lib/libmobileassetd.dylib ===
+Identifier=com.apple.libmobileassetd
+CandidateCDHash sha256=a002602a66882d8a2fd07314c816d6fa91475f1d
+CandidateCDHashFull sha256=a002602a66882d8a2fd07314c816d6fa91475f1d768ff8f4260fcd960f41680d
+CDHash=a002602a66882d8a2fd07314c816d6fa91475f1d
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libmobileassetd.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/usr/lib/libBacktraceRecording.dylib ===
+Identifier=com.apple.libBacktraceRecording
+CandidateCDHash sha256=edf1d6870f463ddfcef651cc48890b7f53a2279d
+CandidateCDHashFull sha256=edf1d6870f463ddfcef651cc48890b7f53a2279dacaf3a7c745f8b449f9e0ea9
+CDHash=edf1d6870f463ddfcef651cc48890b7f53a2279d
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/usr/lib/libBacktraceRecording.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/AccessibilityReaderServices.framework/Versions/A/AccessibilityReaderServices ===
+Identifier=com.apple.accessibility.AccessibilityReaderServices
+CandidateCDHash sha256=3906e1bb5b21bade3e162593fbdb7911f5ff0a0a
+CandidateCDHashFull sha256=3906e1bb5b21bade3e162593fbdb7911f5ff0a0afb8e4fd9aa0a4d4d984949b9
+CDHash=3906e1bb5b21bade3e162593fbdb7911f5ff0a0a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/AccessibilityReaderServices.framework/Versions/A/AccessibilityReaderServices: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/UserNotificationsExtensionPoint.framework/Versions/A/UserNotificationsExtensionPoint ===
+Identifier=com.apple.UserNotificationsExtensionPoint
+CandidateCDHash sha256=16bd0b239148f7e634146ce5724ae51cb6b27704
+CandidateCDHashFull sha256=16bd0b239148f7e634146ce5724ae51cb6b27704244a0651d11f814fd6f2be16
+CDHash=16bd0b239148f7e634146ce5724ae51cb6b27704
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/UserNotificationsExtensionPoint.framework/Versions/A/UserNotificationsExtensionPoint: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/FaceTimeSettingsUI.framework/Versions/A/Frameworks/FaceTimeAuthentication.framework/Versions/A/FaceTimeAuthentication ===
+Identifier=com.apple.FaceTimeAuthentication
+CandidateCDHash sha256=949181df65b3c75db12fc5a149ae31e414625638
+CandidateCDHashFull sha256=949181df65b3c75db12fc5a149ae31e414625638862d120aad697cb6c2d8c4b7
+CDHash=949181df65b3c75db12fc5a149ae31e414625638
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/PrivateFrameworks/FaceTimeSettingsUI.framework/Versions/A/Frameworks/FaceTimeAuthentication.framework/Versions/A/FaceTimeAuthentication: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/SafariServices.framework/PlugIns/SafariServices.wkbundle/Contents/MacOS/SafariServices ===
+Identifier=com.apple.SafariServices.SafariServices
+CandidateCDHash sha256=dfab5ae8e6f98a49c69d9ad7a34a847d90be77e1
+CandidateCDHashFull sha256=dfab5ae8e6f98a49c69d9ad7a34a847d90be77e1deae8e3d08de85d465d3f143
+CDHash=dfab5ae8e6f98a49c69d9ad7a34a847d90be77e1
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/SafariServices.framework/PlugIns/SafariServices.wkbundle/Contents/MacOS/SafariServices: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking ===
+Identifier=com.apple.WebKit.Networking
+CandidateCDHash sha256=2741dcacf9e2065b99f89df9cf58a63e43af33e7
+CandidateCDHashFull sha256=2741dcacf9e2065b99f89df9cf58a63e43af33e76a6d07c5eb0e01e508f8345d
+CDHash=2741dcacf9e2065b99f89df9cf58a63e43af33e7
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal ===
+Identifier=com.apple.WebKit.WebContent.CaptivePortal
+CandidateCDHash sha256=7f5bf8274bc70eb2bda394aedf81c2d9b9eda86e
+CandidateCDHashFull sha256=7f5bf8274bc70eb2bda394aedf81c2d9b9eda86eb992caa1c70923e9676a74cd
+CDHash=7f5bf8274bc70eb2bda394aedf81c2d9b9eda86e
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent ===
+Identifier=com.apple.WebKit.WebContent
+CandidateCDHash sha256=1f3b0043fc12d10087b87ae15b2c81eb746dedf6
+CandidateCDHashFull sha256=1f3b0043fc12d10087b87ae15b2c81eb746dedf6161b022e542a6cb79f10bb4b
+CDHash=1f3b0043fc12d10087b87ae15b2c81eb746dedf6
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development ===
+Identifier=com.apple.WebKit.WebContent.Development
+CandidateCDHash sha256=9e30c444dc8719969ae9f262a0b4237cd10190be
+CandidateCDHashFull sha256=9e30c444dc8719969ae9f262a0b4237cd10190becc6e12f24b6a9cc04ecaa019
+CDHash=9e30c444dc8719969ae9f262a0b4237cd10190be
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU ===
+Identifier=com.apple.WebKit.GPU
+CandidateCDHash sha256=62a2d1230d6cb75c01893419ec62eac6d044fb34
+CandidateCDHashFull sha256=62a2d1230d6cb75c01893419ec62eac6d044fb34d277bd59834b70e6709d0113
+CDHash=62a2d1230d6cb75c01893419ec62eac6d044fb34
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/MapKit.framework/Versions/A/Resources/MapKitSwiftBridge.framework/Versions/A/MapKitSwiftBridge ===
+Identifier=com.apple.SwiftBridge
+CandidateCDHash sha256=5f6d784604b9610d7dba961cde73ddc16871c507
+CandidateCDHashFull sha256=5f6d784604b9610d7dba961cde73ddc16871c507eb92b3131d89ab32ec817683
+CDHash=5f6d784604b9610d7dba961cde73ddc16871c507
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/MapKit.framework/Versions/A/Resources/MapKitSwiftBridge.framework/Versions/A/MapKitSwiftBridge: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc ===
+Identifier=com.apple.jsc
+CandidateCDHash sha256=e4d020c9b9cc1b788fad17440d2b0b9f002176d9
+CandidateCDHashFull sha256=e4d020c9b9cc1b788fad17440d2b0b9f002176d90e73093addd4846076cb9085
+CDHash=e4d020c9b9cc1b788fad17440d2b0b9f002176d9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/iOSSupport/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.atlas ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.atlas: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.map ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.map: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.06 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=3ef2cf77a8e9bedd83590169efc07a8ee617f980
+CandidateCDHashFull sha256=3ef2cf77a8e9bedd83590169efc07a8ee617f980d8fc7f703df3875aa63f74fd
+CDHash=3ef2cf77a8e9bedd83590169efc07a8ee617f980
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.06: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.01 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=629457a388c255fff3ddd17e3a03f3ed177fe6da
+CandidateCDHashFull sha256=629457a388c255fff3ddd17e3a03f3ed177fe6da45c7d1ff987614a298e351c4
+CDHash=629457a388c255fff3ddd17e3a03f3ed177fe6da
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.01: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.map ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.map: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.5 ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.5: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.2 ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.2: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.3 ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.3: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.4 ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.4: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.04 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=656f94ddd5fbda558b2c2dcd2647ab0d5ea73c8a
+CandidateCDHashFull sha256=656f94ddd5fbda558b2c2dcd2647ab0d5ea73c8aa5f83a7a980b28a7f2761d5b
+CDHash=656f94ddd5fbda558b2c2dcd2647ab0d5ea73c8a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.04: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.01 ===
+Identifier=com.apple.dyld.cache.arm64e.development
+CandidateCDHash sha256=5c7b14415203047d2c736e3f7c5d50148e0315c9
+CandidateCDHashFull sha256=5c7b14415203047d2c736e3f7c5d50148e0315c921024191b1659410aa010131
+CDHash=5c7b14415203047d2c736e3f7c5d50148e0315c9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.01: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.03 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=b5c43969376b0268783042c8b22149d0c1eec4ae
+CandidateCDHashFull sha256=b5c43969376b0268783042c8b22149d0c1eec4ae35a40d29b5be4ae2a48ae9d1
+CDHash=b5c43969376b0268783042c8b22149d0c1eec4ae
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.03: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.02 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=e366367161b9e26bc15601da6257824da0bc0a59
+CandidateCDHashFull sha256=e366367161b9e26bc15601da6257824da0bc0a599a456fab19e07ca582b3ac8c
+CDHash=e366367161b9e26bc15601da6257824da0bc0a59
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.02: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.05 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=c7c56a370f213e3989da7c3cf2021eb958a76047
+CandidateCDHashFull sha256=c7c56a370f213e3989da7c3cf2021eb958a76047a182ab73fc07975a3a1cda1a
+CDHash=c7c56a370f213e3989da7c3cf2021eb958a76047
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64.05: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.atlas ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.atlas: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e ===
+Identifier=com.apple.dyld.cache.arm64e.development
+CandidateCDHash sha256=f5b8fc0ddb1ed9041c98697db076b7961f3382a8
+CandidateCDHashFull sha256=f5b8fc0ddb1ed9041c98697db076b7961f3382a86e28fe8fd99e75b5a873da6e
+CDHash=f5b8fc0ddb1ed9041c98697db076b7961f3382a8
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.1 ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.1: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.6 ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.6: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=323656fda51c90400d33c4454b3abe38c0549219
+CandidateCDHashFull sha256=323656fda51c90400d33c4454b3abe38c0549219572af64340ea9e3946a11c71
+CDHash=323656fda51c90400d33c4454b3abe38c0549219
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_x86_64: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.0 ===
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/aot_shared_cache.0: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDMTLBronzeDriver.bundle/Contents/MacOS/AMDMTLBronzeDriver ===
+Identifier=com.apple.AMDMTLBronzeDriver
+CandidateCDHash sha256=798531c6d44c919dd8bd289b702f9c46ea42bdb3
+CandidateCDHashFull sha256=798531c6d44c919dd8bd289b702f9c46ea42bdb3b8a30935a96c5569be525563
+CDHash=798531c6d44c919dd8bd289b702f9c46ea42bdb3
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDMTLBronzeDriver.bundle/Contents/MacOS/AMDMTLBronzeDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000Shared.bundle/Contents/MacOS/AMDRadeonX5000Shared ===
+Identifier=com.apple.AMDRadeonX5000Shared
+CandidateCDHash sha256=b34858ab4dc273f5a9c461e38e717b9cd5ede9b7
+CandidateCDHashFull sha256=b34858ab4dc273f5a9c461e38e717b9cd5ede9b75ae251aab1889b8cdd922c8c
+CDHash=b34858ab4dc273f5a9c461e38e717b9cd5ede9b7
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000Shared.bundle/Contents/MacOS/AMDRadeonX5000Shared: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonVADriver2.bundle/Contents/MacOS/AMDRadeonVADriver2 ===
+Identifier=com.apple.AMDRadeonVADriver2
+CandidateCDHash sha256=a056fbe6ac8f45fa50cf32bf0fd6ab87edc5b8fa
+CandidateCDHashFull sha256=a056fbe6ac8f45fa50cf32bf0fd6ab87edc5b8fae5d9684c908c81e1c0e9c55c
+CDHash=a056fbe6ac8f45fa50cf32bf0fd6ab87edc5b8fa
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonVADriver2.bundle/Contents/MacOS/AMDRadeonVADriver2: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonVADriver.bundle/Contents/MacOS/AMDRadeonVADriver ===
+Identifier=com.apple.AMDRadeonVADriver
+CandidateCDHash sha256=7921fc2419c2a6a3812db5edfa89b1cc9f2ac82f
+CandidateCDHashFull sha256=7921fc2419c2a6a3812db5edfa89b1cc9f2ac82fb2699787b48aac42c687c75d
+CDHash=7921fc2419c2a6a3812db5edfa89b1cc9f2ac82f
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonVADriver.bundle/Contents/MacOS/AMDRadeonVADriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelKBLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsMTLDriver ===
+Identifier=com.apple.driver.AppleIntelKBLGraphicsMTLDriver
+CandidateCDHash sha256=08d4820a70ab4d831aca2e8eacf6058efa3553ee
+CandidateCDHashFull sha256=08d4820a70ab4d831aca2e8eacf6058efa3553ee7b34b6c939fd22c5e4faa214
+CDHash=08d4820a70ab4d831aca2e8eacf6058efa3553ee
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelKBLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsMTLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000GLDriver.bundle/Contents/MacOS/ATIRadeonX5000SCLib.dylib ===
+Identifier=com.apple.ATIRadeonX5000SCLib
+CandidateCDHash sha256=9a9a81f76ae24a38ae3b2735810bc1ad454d0cdd
+CandidateCDHashFull sha256=9a9a81f76ae24a38ae3b2735810bc1ad454d0cddd457c8b3c146e4dcebab637d
+CDHash=9a9a81f76ae24a38ae3b2735810bc1ad454d0cdd
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000GLDriver.bundle/Contents/MacOS/ATIRadeonX5000SCLib.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelICLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsGLDriver ===
+Identifier=com.apple.driver.AppleIntelICLGraphicsGLDriver
+CandidateCDHash sha256=3b1e03c0f0c782b481312b4485df19469d0a50a7
+CandidateCDHashFull sha256=3b1e03c0f0c782b481312b4485df19469d0a50a7013fd4920ef1b967bad66c25
+CDHash=3b1e03c0f0c782b481312b4485df19469d0a50a7
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelICLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsGLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX4000GLDriver.bundle/Contents/MacOS/ATIRadeonX4000SCLib.dylib ===
+Identifier=com.apple.ATIRadeonX4000SCLib
+CandidateCDHash sha256=9971adc93d858424a52346e051c809d9b25ac872
+CandidateCDHashFull sha256=9971adc93d858424a52346e051c809d9b25ac872b2b03d0cfa7982abf03ad5c3
+CDHash=9971adc93d858424a52346e051c809d9b25ac872
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX4000GLDriver.bundle/Contents/MacOS/ATIRadeonX4000SCLib.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelICLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsMTLDriver ===
+Identifier=com.apple.driver.AppleIntelICLGraphicsMTLDriver
+CandidateCDHash sha256=7617de48cca1542174072a1df3ac134ebe63d7dd
+CandidateCDHashFull sha256=7617de48cca1542174072a1df3ac134ebe63d7dd920c2852d94f39953f3099ba
+CDHash=7617de48cca1542174072a1df3ac134ebe63d7dd
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelICLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsMTLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelKBLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsGLDriver ===
+Identifier=com.apple.driver.AppleIntelKBLGraphicsGLDriver
+CandidateCDHash sha256=8cb03b453064a95330618d4bcba291dfa5511200
+CandidateCDHashFull sha256=8cb03b453064a95330618d4bcba291dfa55112005d84c0db77cd330e78b6365f
+CDHash=8cb03b453064a95330618d4bcba291dfa5511200
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AppleIntelKBLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsGLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000Shared.bundle/Contents/MacOS/AMDRadeonX6000Shared ===
+Identifier=com.apple.AMDRadeonX6000Shared
+CandidateCDHash sha256=1a662a5442f24f7b58fb41204a4a8ef54e623375
+CandidateCDHashFull sha256=1a662a5442f24f7b58fb41204a4a8ef54e623375375038f6edf7ed8054bc9f25
+CDHash=1a662a5442f24f7b58fb41204a4a8ef54e623375
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000Shared.bundle/Contents/MacOS/AMDRadeonX6000Shared: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000MTLDriver.bundle/Contents/MacOS/AMDRadeonX5000MTLDriver ===
+Identifier=com.apple.AMDRadeonX5000MTLDriver
+CandidateCDHash sha256=6b3d4d39142c6545dd267f646e673c228ab59ec7
+CandidateCDHashFull sha256=6b3d4d39142c6545dd267f646e673c228ab59ec72ea4bae56f116b0778a4100b
+CDHash=6b3d4d39142c6545dd267f646e673c228ab59ec7
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX5000MTLDriver.bundle/Contents/MacOS/AMDRadeonX5000MTLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000MTLDriver.bundle/Contents/MacOS/AMDRadeonX6000MTLDriver ===
+Identifier=com.apple.AMDRadeonX6000MTLDriver
+CandidateCDHash sha256=4d8c4d4c32f155f28aa423aa3fc60d991f1ca579
+CandidateCDHashFull sha256=4d8c4d4c32f155f28aa423aa3fc60d991f1ca579643a91cf011032180e7463f1
+CDHash=4d8c4d4c32f155f28aa423aa3fc60d991f1ca579
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000MTLDriver.bundle/Contents/MacOS/AMDRadeonX6000MTLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000GLDriver.bundle/Contents/MacOS/ATIRadeonX6000SCLib.dylib ===
+Identifier=com.apple.ATIRadeonX6000SCLib
+CandidateCDHash sha256=a57c73e28ce07a7251db17786ab91c66ad873bd8
+CandidateCDHashFull sha256=a57c73e28ce07a7251db17786ab91c66ad873bd88532083da03ae1a84f76b634
+CDHash=a57c73e28ce07a7251db17786ab91c66ad873bd8
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDRadeonX6000GLDriver.bundle/Contents/MacOS/ATIRadeonX6000SCLib.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDShared.bundle/Contents/MacOS/AMDShared ===
+Identifier=com.apple.AMDShared
+CandidateCDHash sha256=320b8921e619963bd023273765f447fda0a4ffcb
+CandidateCDHashFull sha256=320b8921e619963bd023273765f447fda0a4ffcb08e6217ddb92f8feec145d9c
+CDHash=320b8921e619963bd023273765f447fda0a4ffcb
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDShared.bundle/Contents/MacOS/AMDShared: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDShared.bundle/Contents/PlugIns/libAMDIL902.dylib ===
+Identifier=com.apple.libAMDIL902
+CandidateCDHash sha256=c4078896ca3382da2f6d0c8cba384c1e04f465cc
+CandidateCDHashFull sha256=c4078896ca3382da2f6d0c8cba384c1e04f465cc98e3b225ba7b58ccf9c483d2
+CDHash=c4078896ca3382da2f6d0c8cba384c1e04f465cc
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Extensions/AMDShared.bundle/Contents/PlugIns/libAMDIL902.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper ===
+Identifier=com.apple.SafariPlatformSupport.Helper
+CandidateCDHash sha256=30906f9d7e849f1b7b3be9d0c2dea88b4537ba9c
+CandidateCDHashFull sha256=30906f9d7e849f1b7b3be9d0c2dea88b4537ba9c8fb3e775c29d09bb2b5c8351
+CDHash=30906f9d7e849f1b7b3be9d0c2dea88b4537ba9c
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/ApplePDPHelper.framework/Versions/A/ApplePDPHelper ===
+Identifier=com.apple.ApplePDPHelper
+CandidateCDHash sha256=dc5176540f9d55f2f0454287eaa37ab62fd9010d
+CandidateCDHashFull sha256=dc5176540f9d55f2f0454287eaa37ab62fd9010d9ade071d76bbdd571a349939
+CDHash=dc5176540f9d55f2f0454287eaa37ab62fd9010d
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/ApplePDPHelper.framework/Versions/A/ApplePDPHelper: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/WebDriver.framework/Versions/A/XPCServices/com.apple.WebDriver.HTTPService.xpc/Contents/MacOS/com.apple.WebDriver.HTTPService ===
+Identifier=com.apple.WebDriver.HTTPService
+CandidateCDHash sha256=a123bb12052138b149e3f36c56e7f4649e639ce2
+CandidateCDHashFull sha256=a123bb12052138b149e3f36c56e7f4649e639ce27dd50e29f97fbb13b637cef8
+CDHash=a123bb12052138b149e3f36c56e7f4649e639ce2
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/WebDriver.framework/Versions/A/XPCServices/com.apple.WebDriver.HTTPService.xpc/Contents/MacOS/com.apple.WebDriver.HTTPService: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/ExclaveFDRDecode.framework/Versions/A/ExclaveFDRDecode ===
+Identifier=com.apple.ExclaveFDRDecodeRawDataStoreKit
+CandidateCDHash sha256=0a12ecc4f3d294f9700a4922b52e11013ef3ea77
+CandidateCDHashFull sha256=0a12ecc4f3d294f9700a4922b52e11013ef3ea777ba94820c28b65e539abcb4a
+CDHash=0a12ecc4f3d294f9700a4922b52e11013ef3ea77
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/ExclaveFDRDecode.framework/Versions/A/ExclaveFDRDecode: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/CredentialProviderExtensionHelper.xpc/Contents/MacOS/CredentialProviderExtensionHelper ===
+Identifier=com.apple.SafariFoundation.CredentialProviderExtensionHelper
+CandidateCDHash sha256=9dde5d9d68115bb8c6f7f9465a006efbdd5d5d19
+CandidateCDHashFull sha256=9dde5d9d68115bb8c6f7f9465a006efbdd5d5d19a7a5bb31c0284d67b98e07b3
+CDHash=9dde5d9d68115bb8c6f7f9465a006efbdd5d5d19
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/CredentialProviderExtensionHelper.xpc/Contents/MacOS/CredentialProviderExtensionHelper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/SafariConfigurationSubscriber.xpc/Contents/MacOS/SafariConfigurationSubscriber ===
+Identifier=com.apple.SafariShared.SafariConfigurationSubscriber
+CandidateCDHash sha256=2495e810162d4a97f303ab06941d4df4a0dda404
+CandidateCDHashFull sha256=2495e810162d4a97f303ab06941d4df4a0dda4047d5dec58eb52182537ecef80
+CDHash=2495e810162d4a97f303ab06941d4df4a0dda404
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/SafariConfigurationSubscriber.xpc/Contents/MacOS/SafariConfigurationSubscriber: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.SearchHelper.xpc/Contents/MacOS/com.apple.Safari.SearchHelper ===
+Identifier=com.apple.Safari.SearchHelper
+CandidateCDHash sha256=fb5cbd19157055a0bd9dbe6050f305da95128f40
+CandidateCDHashFull sha256=fb5cbd19157055a0bd9dbe6050f305da95128f4065af5337a612a4dccb3f1b43
+CDHash=fb5cbd19157055a0bd9dbe6050f305da95128f40
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.SearchHelper.xpc/Contents/MacOS/com.apple.Safari.SearchHelper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.CredentialExtractionHelper.xpc/Contents/MacOS/com.apple.Safari.CredentialExtractionHelper ===
+Identifier=com.apple.Safari.CredentialExtractionHelper
+CandidateCDHash sha256=dfaabdf4fa5ffc64cea5b1c96790f2c9969b7ac2
+CandidateCDHashFull sha256=dfaabdf4fa5ffc64cea5b1c96790f2c9969b7ac215d7fb810486703bd70b8880
+CDHash=dfaabdf4fa5ffc64cea5b1c96790f2c9969b7ac2
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.CredentialExtractionHelper.xpc/Contents/MacOS/com.apple.Safari.CredentialExtractionHelper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/PlugInKitDaemon.framework/Versions/A/PlugInKitDaemon ===
+Identifier=com.apple.pluginkit.PlugInKitDaemon
+CandidateCDHash sha256=983ff116a5a6bbbf725182b9e8703a81f2f0e51d
+CandidateCDHashFull sha256=983ff116a5a6bbbf725182b9e8703a81f2f0e51d8354f6317651de3b9516383b
+CDHash=983ff116a5a6bbbf725182b9e8703a81f2f0e51d
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/PlugInKitDaemon.framework/Versions/A/PlugInKitDaemon: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/HelloWorldMacHelper.framework/Versions/A/HelloWorldMacHelper ===
+Identifier=com.apple.HelloWorldMacHelper
+CandidateCDHash sha256=35d2edcaacdc174e50b06b95b87167518b598bf9
+CandidateCDHashFull sha256=35d2edcaacdc174e50b06b95b87167518b598bf91c5f5623fb5d07d306145401
+CDHash=35d2edcaacdc174e50b06b95b87167518b598bf9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/PrivateFrameworks/HelloWorldMacHelper.framework/Versions/A/HelloWorldMacHelper: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.ExtensionHelper.xpc/Contents/MacOS/com.apple.SafariServices.ExtensionHelper ===
+Identifier=com.apple.SafariServices.ExtensionHelper
+CandidateCDHash sha256=74a779c439a6a689739d404b4680a655dc5f5a72
+CandidateCDHashFull sha256=74a779c439a6a689739d404b4680a655dc5f5a726d3ace329210d2ac657dd471
+CDHash=74a779c439a6a689739d404b4680a655dc5f5a72
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.ExtensionHelper.xpc/Contents/MacOS/com.apple.SafariServices.ExtensionHelper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.xpc/Contents/MacOS/com.apple.SafariServices ===
+Identifier=com.apple.SafariServices
+CandidateCDHash sha256=b6d84e56fef7359e7a184d7950be888c0796569f
+CandidateCDHashFull sha256=b6d84e56fef7359e7a184d7950be888c0796569f394ffd3c4516056b27e6b4e1
+CDHash=b6d84e56fef7359e7a184d7950be888c0796569f
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.xpc/Contents/MacOS/com.apple.SafariServices: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/3425AMD/libLLVMContainer.dylib ===
+Identifier=com.apple.libLLVMContainer
+CandidateCDHash sha256=e50441fbc954e88ccbbf87cc78b0edee0d277dfb
+CandidateCDHashFull sha256=e50441fbc954e88ccbbf87cc78b0edee0d277dfbd23162b29277ce337903a9c3
+CDHash=e50441fbc954e88ccbbf87cc78b0edee0d277dfb
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/3425AMD/libLLVMContainer.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking ===
+Identifier=com.apple.WebKit.Networking
+CandidateCDHash sha256=274213e512b6ebab8c35a99be5fc40fbf630f4e8
+CandidateCDHashFull sha256=274213e512b6ebab8c35a99be5fc40fbf630f4e8111f986f1beeb52dbbd209a3
+CDHash=274213e512b6ebab8c35a99be5fc40fbf630f4e8
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal ===
+Identifier=com.apple.WebKit.WebContent.CaptivePortal
+CandidateCDHash sha256=8abd2cbc77dc4ce4f792d5d44b55eb9f1147e515
+CandidateCDHashFull sha256=8abd2cbc77dc4ce4f792d5d44b55eb9f1147e51552c145283fcef1fa3205171e
+CDHash=8abd2cbc77dc4ce4f792d5d44b55eb9f1147e515
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent ===
+Identifier=com.apple.WebKit.WebContent
+CandidateCDHash sha256=5c201f08c8d7ffb9d9bc9723c0a0a43e9492476c
+CandidateCDHashFull sha256=5c201f08c8d7ffb9d9bc9723c0a0a43e9492476ce6e85c43f56582b2db99a91c
+CDHash=5c201f08c8d7ffb9d9bc9723c0a0a43e9492476c
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development ===
+Identifier=com.apple.WebKit.WebContent.Development
+CandidateCDHash sha256=ad43ebcff308b6cf58a9598ba82acb77029be841
+CandidateCDHashFull sha256=ad43ebcff308b6cf58a9598ba82acb77029be841f31a0d3e431ca01a2e993dd1
+CDHash=ad43ebcff308b6cf58a9598ba82acb77029be841
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU ===
+Identifier=com.apple.WebKit.GPU
+CandidateCDHash sha256=ddb3e23f9c175f64ac91907450b51ed0ed58d9fe
+CandidateCDHashFull sha256=ddb3e23f9c175f64ac91907450b51ed0ed58d9fe58cf9d1e9245cddbc32b3f1e
+CDHash=ddb3e23f9c175f64ac91907450b51ed0ed58d9fe
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/3425AMD/libcl2module.dylib ===
+Identifier=com.apple.libcl2module
+CandidateCDHash sha256=a8c7a7990f634a5512281222b9b16e0adb198439
+CandidateCDHashFull sha256=a8c7a7990f634a5512281222b9b16e0adb198439c43957d5bda6942290ceca1d
+CDHash=a8c7a7990f634a5512281222b9b16e0adb198439
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/3425AMD/libcl2module.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/AuthenticationServices.framework/Versions/A/XPCServices/com.apple.AuthenticationServices.Helper.xpc/Contents/MacOS/com.apple.AuthenticationServices.Helper ===
+Identifier=com.apple.AuthenticationServices.Helper
+CandidateCDHash sha256=a6326f8055a3ecd245cbbbbbd69c4731ca16ad8f
+CandidateCDHashFull sha256=a6326f8055a3ecd245cbbbbbd69c4731ca16ad8f8fd223f67e5da340177b1bb9
+CDHash=a6326f8055a3ecd245cbbbbbd69c4731ca16ad8f
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/AuthenticationServices.framework/Versions/A/XPCServices/com.apple.AuthenticationServices.Helper.xpc/Contents/MacOS/com.apple.AuthenticationServices.Helper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc ===
+Identifier=com.apple.jsc
+CandidateCDHash sha256=eab9640f935106d99479ead6e937363fcf4381d0
+CandidateCDHashFull sha256=eab9640f935106d99479ead6e937363fcf4381d02c1c31a5f7c1376b76173bf7
+CDHash=eab9640f935106d99479ead6e937363fcf4381d0
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.atlas ===
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.atlas: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.symbols ===
+Identifier=com.apple.dyld.cache.arm64e.development
+CandidateCDHash sha256=73052e08807310ec87b588fac754e0098ba81cee
+CandidateCDHashFull sha256=73052e08807310ec87b588fac754e0098ba81ceece9db23e755e9b7c23bc8418
+CDHash=73052e08807310ec87b588fac754e0098ba81cee
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.symbols: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.symbols ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=0f83768b8ab56122cbc8ef0293f9a249fbad8d25
+CandidateCDHashFull sha256=0f83768b8ab56122cbc8ef0293f9a249fbad8d252978fa737621433e0d50e470
+CDHash=0f83768b8ab56122cbc8ef0293f9a249fbad8d25
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.symbols: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.atlas ===
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.atlas: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e ===
+Identifier=com.apple.dyld.cache.arm64e.development
+CandidateCDHash sha256=fa13d468cab8552d95e5c3b4df302d5b202d6169
+CandidateCDHashFull sha256=fa13d468cab8552d95e5c3b4df302d5b202d61691950acec619a97f606004ae2
+CDHash=fa13d468cab8552d95e5c3b4df302d5b202d6169
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=c06d0e63018a6b11c7cc2b037f4bc8a6a95c6132
+CandidateCDHashFull sha256=c06d0e63018a6b11c7cc2b037f4bc8a6a95c613224982d27e777d4a7616373ca
+CDHash=c06d0e63018a6b11c7cc2b037f4bc8a6a95c6132
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libMainThreadChecker.dylib ===
+Identifier=com.apple.libMainThreadChecker
+CandidateCDHash sha256=dde89b7f01a0cee1855548b6d000587f4fc4623a
+CandidateCDHashFull sha256=dde89b7f01a0cee1855548b6d000587f4fc4623a7d18a446a50280665f9bc975
+CDHash=dde89b7f01a0cee1855548b6d000587f4fc4623a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libMainThreadChecker.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libLogRedirect.dylib ===
+Identifier=com.apple.libLogRedirect
+CandidateCDHash sha256=34a45a929c2dabb51bc09936c7b83ae6961ad883
+CandidateCDHashFull sha256=34a45a929c2dabb51bc09936c7b83ae6961ad883aeaac1eb12bb3af8107a958a
+CDHash=34a45a929c2dabb51bc09936c7b83ae6961ad883
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libLogRedirect.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_pthread.dylib ===
+Identifier=com.apple.libsystem_pthread
+CandidateCDHash sha256=e8a425f8364332363085e12033f0071e3bbb8eee
+CandidateCDHashFull sha256=e8a425f8364332363085e12033f0071e3bbb8eeee4d281e8f290c86ed10ca113
+CDHash=e8a425f8364332363085e12033f0071e3bbb8eee
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_pthread.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_kernel.dylib ===
+Identifier=com.apple.libsystem_kernel
+CandidateCDHash sha256=950ccd79c57414317619d8fafc23e71748af9b8e
+CandidateCDHashFull sha256=950ccd79c57414317619d8fafc23e71748af9b8ef955c8a7817fd1572687199c
+CDHash=950ccd79c57414317619d8fafc23e71748af9b8e
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_kernel.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_platform.dylib ===
+Identifier=com.apple.libsystem_platform
+CandidateCDHash sha256=3050b87f40fff495bbb74e89972f4fd1160e797a
+CandidateCDHashFull sha256=3050b87f40fff495bbb74e89972f4fd1160e797a3b2c99ef4f25ffb7088c644a
+CDHash=3050b87f40fff495bbb74e89972f4fd1160e797a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/system/libsystem_platform.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libMTLHud.dylib ===
+Identifier=com.apple.libMTLHud
+CandidateCDHash sha256=8cb4752f84b9ac67f2ae0030df14ef06bc5f20a9
+CandidateCDHashFull sha256=8cb4752f84b9ac67f2ae0030df14ef06bc5f20a9e8804b99f63799f0f707239d
+CDHash=8cb4752f84b9ac67f2ae0030df14ef06bc5f20a9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libMTLHud.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libmobileassetd.dylib ===
+Identifier=com.apple.libmobileassetd
+CandidateCDHash sha256=a002602a66882d8a2fd07314c816d6fa91475f1d
+CandidateCDHashFull sha256=a002602a66882d8a2fd07314c816d6fa91475f1d768ff8f4260fcd960f41680d
+CDHash=a002602a66882d8a2fd07314c816d6fa91475f1d
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libmobileassetd.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libBacktraceRecording.dylib ===
+Identifier=com.apple.libBacktraceRecording
+CandidateCDHash sha256=edf1d6870f463ddfcef651cc48890b7f53a2279d
+CandidateCDHashFull sha256=edf1d6870f463ddfcef651cc48890b7f53a2279dacaf3a7c745f8b449f9e0ea9
+CDHash=edf1d6870f463ddfcef651cc48890b7f53a2279d
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/usr/lib/libBacktraceRecording.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/AccessibilityReaderServices.framework/Versions/A/AccessibilityReaderServices ===
+Identifier=com.apple.accessibility.AccessibilityReaderServices
+CandidateCDHash sha256=3906e1bb5b21bade3e162593fbdb7911f5ff0a0a
+CandidateCDHashFull sha256=3906e1bb5b21bade3e162593fbdb7911f5ff0a0afb8e4fd9aa0a4d4d984949b9
+CDHash=3906e1bb5b21bade3e162593fbdb7911f5ff0a0a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/AccessibilityReaderServices.framework/Versions/A/AccessibilityReaderServices: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/UserNotificationsExtensionPoint.framework/Versions/A/UserNotificationsExtensionPoint ===
+Identifier=com.apple.UserNotificationsExtensionPoint
+CandidateCDHash sha256=16bd0b239148f7e634146ce5724ae51cb6b27704
+CandidateCDHashFull sha256=16bd0b239148f7e634146ce5724ae51cb6b27704244a0651d11f814fd6f2be16
+CDHash=16bd0b239148f7e634146ce5724ae51cb6b27704
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/UserNotificationsExtensionPoint.framework/Versions/A/UserNotificationsExtensionPoint: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/FaceTimeSettingsUI.framework/Versions/A/Frameworks/FaceTimeAuthentication.framework/Versions/A/FaceTimeAuthentication ===
+Identifier=com.apple.FaceTimeAuthentication
+CandidateCDHash sha256=949181df65b3c75db12fc5a149ae31e414625638
+CandidateCDHashFull sha256=949181df65b3c75db12fc5a149ae31e414625638862d120aad697cb6c2d8c4b7
+CDHash=949181df65b3c75db12fc5a149ae31e414625638
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/PrivateFrameworks/FaceTimeSettingsUI.framework/Versions/A/Frameworks/FaceTimeAuthentication.framework/Versions/A/FaceTimeAuthentication: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/SafariServices.framework/PlugIns/SafariServices.wkbundle/Contents/MacOS/SafariServices ===
+Identifier=com.apple.SafariServices.SafariServices
+CandidateCDHash sha256=dfab5ae8e6f98a49c69d9ad7a34a847d90be77e1
+CandidateCDHashFull sha256=dfab5ae8e6f98a49c69d9ad7a34a847d90be77e1deae8e3d08de85d465d3f143
+CDHash=dfab5ae8e6f98a49c69d9ad7a34a847d90be77e1
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/SafariServices.framework/PlugIns/SafariServices.wkbundle/Contents/MacOS/SafariServices: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking ===
+Identifier=com.apple.WebKit.Networking
+CandidateCDHash sha256=2741dcacf9e2065b99f89df9cf58a63e43af33e7
+CandidateCDHashFull sha256=2741dcacf9e2065b99f89df9cf58a63e43af33e76a6d07c5eb0e01e508f8345d
+CDHash=2741dcacf9e2065b99f89df9cf58a63e43af33e7
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal ===
+Identifier=com.apple.WebKit.WebContent.CaptivePortal
+CandidateCDHash sha256=7f5bf8274bc70eb2bda394aedf81c2d9b9eda86e
+CandidateCDHashFull sha256=7f5bf8274bc70eb2bda394aedf81c2d9b9eda86eb992caa1c70923e9676a74cd
+CDHash=7f5bf8274bc70eb2bda394aedf81c2d9b9eda86e
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent ===
+Identifier=com.apple.WebKit.WebContent
+CandidateCDHash sha256=1f3b0043fc12d10087b87ae15b2c81eb746dedf6
+CandidateCDHashFull sha256=1f3b0043fc12d10087b87ae15b2c81eb746dedf6161b022e542a6cb79f10bb4b
+CDHash=1f3b0043fc12d10087b87ae15b2c81eb746dedf6
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development ===
+Identifier=com.apple.WebKit.WebContent.Development
+CandidateCDHash sha256=9e30c444dc8719969ae9f262a0b4237cd10190be
+CandidateCDHashFull sha256=9e30c444dc8719969ae9f262a0b4237cd10190becc6e12f24b6a9cc04ecaa019
+CDHash=9e30c444dc8719969ae9f262a0b4237cd10190be
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU ===
+Identifier=com.apple.WebKit.GPU
+CandidateCDHash sha256=62a2d1230d6cb75c01893419ec62eac6d044fb34
+CandidateCDHashFull sha256=62a2d1230d6cb75c01893419ec62eac6d044fb34d277bd59834b70e6709d0113
+CDHash=62a2d1230d6cb75c01893419ec62eac6d044fb34
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/MapKit.framework/Versions/A/Resources/MapKitSwiftBridge.framework/Versions/A/MapKitSwiftBridge ===
+Identifier=com.apple.SwiftBridge
+CandidateCDHash sha256=5f6d784604b9610d7dba961cde73ddc16871c507
+CandidateCDHashFull sha256=5f6d784604b9610d7dba961cde73ddc16871c507eb92b3131d89ab32ec817683
+CDHash=5f6d784604b9610d7dba961cde73ddc16871c507
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/MapKit.framework/Versions/A/Resources/MapKitSwiftBridge.framework/Versions/A/MapKitSwiftBridge: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc ===
+Identifier=com.apple.jsc
+CandidateCDHash sha256=e4d020c9b9cc1b788fad17440d2b0b9f002176d9
+CandidateCDHashFull sha256=e4d020c9b9cc1b788fad17440d2b0b9f002176d90e73093addd4846076cb9085
+CDHash=e4d020c9b9cc1b788fad17440d2b0b9f002176d9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/iOSSupport/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.atlas ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.atlas: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.map ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.map: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.06 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=3ef2cf77a8e9bedd83590169efc07a8ee617f980
+CandidateCDHashFull sha256=3ef2cf77a8e9bedd83590169efc07a8ee617f980d8fc7f703df3875aa63f74fd
+CDHash=3ef2cf77a8e9bedd83590169efc07a8ee617f980
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.06: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.01 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=629457a388c255fff3ddd17e3a03f3ed177fe6da
+CandidateCDHashFull sha256=629457a388c255fff3ddd17e3a03f3ed177fe6da45c7d1ff987614a298e351c4
+CDHash=629457a388c255fff3ddd17e3a03f3ed177fe6da
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.01: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.map ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.map: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.5 ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.5: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.2 ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.2: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.3 ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.3: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.4 ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.4: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.04 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=656f94ddd5fbda558b2c2dcd2647ab0d5ea73c8a
+CandidateCDHashFull sha256=656f94ddd5fbda558b2c2dcd2647ab0d5ea73c8aa5f83a7a980b28a7f2761d5b
+CDHash=656f94ddd5fbda558b2c2dcd2647ab0d5ea73c8a
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.04: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.01 ===
+Identifier=com.apple.dyld.cache.arm64e.development
+CandidateCDHash sha256=5c7b14415203047d2c736e3f7c5d50148e0315c9
+CandidateCDHashFull sha256=5c7b14415203047d2c736e3f7c5d50148e0315c921024191b1659410aa010131
+CDHash=5c7b14415203047d2c736e3f7c5d50148e0315c9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.01: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.03 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=b5c43969376b0268783042c8b22149d0c1eec4ae
+CandidateCDHashFull sha256=b5c43969376b0268783042c8b22149d0c1eec4ae35a40d29b5be4ae2a48ae9d1
+CDHash=b5c43969376b0268783042c8b22149d0c1eec4ae
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.03: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.02 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=e366367161b9e26bc15601da6257824da0bc0a59
+CandidateCDHashFull sha256=e366367161b9e26bc15601da6257824da0bc0a599a456fab19e07ca582b3ac8c
+CDHash=e366367161b9e26bc15601da6257824da0bc0a59
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.02: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.05 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=c7c56a370f213e3989da7c3cf2021eb958a76047
+CandidateCDHashFull sha256=c7c56a370f213e3989da7c3cf2021eb958a76047a182ab73fc07975a3a1cda1a
+CDHash=c7c56a370f213e3989da7c3cf2021eb958a76047
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64.05: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.atlas ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e.atlas: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e ===
+Identifier=com.apple.dyld.cache.arm64e.development
+CandidateCDHash sha256=f5b8fc0ddb1ed9041c98697db076b7961f3382a8
+CandidateCDHashFull sha256=f5b8fc0ddb1ed9041c98697db076b7961f3382a86e28fe8fd99e75b5a873da6e
+CDHash=f5b8fc0ddb1ed9041c98697db076b7961f3382a8
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_arm64e: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.1 ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.1: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.6 ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.6: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=323656fda51c90400d33c4454b3abe38c0549219
+CandidateCDHashFull sha256=323656fda51c90400d33c4454b3abe38c0549219572af64340ea9e3946a11c71
+CDHash=323656fda51c90400d33c4454b3abe38c0549219
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/dyld_shared_cache_x86_64: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.0 ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/dyld/aot_shared_cache.0: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDMTLBronzeDriver.bundle/Contents/MacOS/AMDMTLBronzeDriver ===
+Identifier=com.apple.AMDMTLBronzeDriver
+CandidateCDHash sha256=798531c6d44c919dd8bd289b702f9c46ea42bdb3
+CandidateCDHashFull sha256=798531c6d44c919dd8bd289b702f9c46ea42bdb3b8a30935a96c5569be525563
+CDHash=798531c6d44c919dd8bd289b702f9c46ea42bdb3
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDMTLBronzeDriver.bundle/Contents/MacOS/AMDMTLBronzeDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000Shared.bundle/Contents/MacOS/AMDRadeonX5000Shared ===
+Identifier=com.apple.AMDRadeonX5000Shared
+CandidateCDHash sha256=b34858ab4dc273f5a9c461e38e717b9cd5ede9b7
+CandidateCDHashFull sha256=b34858ab4dc273f5a9c461e38e717b9cd5ede9b75ae251aab1889b8cdd922c8c
+CDHash=b34858ab4dc273f5a9c461e38e717b9cd5ede9b7
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000Shared.bundle/Contents/MacOS/AMDRadeonX5000Shared: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonVADriver2.bundle/Contents/MacOS/AMDRadeonVADriver2 ===
+Identifier=com.apple.AMDRadeonVADriver2
+CandidateCDHash sha256=a056fbe6ac8f45fa50cf32bf0fd6ab87edc5b8fa
+CandidateCDHashFull sha256=a056fbe6ac8f45fa50cf32bf0fd6ab87edc5b8fae5d9684c908c81e1c0e9c55c
+CDHash=a056fbe6ac8f45fa50cf32bf0fd6ab87edc5b8fa
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonVADriver2.bundle/Contents/MacOS/AMDRadeonVADriver2: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonVADriver.bundle/Contents/MacOS/AMDRadeonVADriver ===
+Identifier=com.apple.AMDRadeonVADriver
+CandidateCDHash sha256=7921fc2419c2a6a3812db5edfa89b1cc9f2ac82f
+CandidateCDHashFull sha256=7921fc2419c2a6a3812db5edfa89b1cc9f2ac82fb2699787b48aac42c687c75d
+CDHash=7921fc2419c2a6a3812db5edfa89b1cc9f2ac82f
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonVADriver.bundle/Contents/MacOS/AMDRadeonVADriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelKBLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsMTLDriver ===
+Identifier=com.apple.driver.AppleIntelKBLGraphicsMTLDriver
+CandidateCDHash sha256=08d4820a70ab4d831aca2e8eacf6058efa3553ee
+CandidateCDHashFull sha256=08d4820a70ab4d831aca2e8eacf6058efa3553ee7b34b6c939fd22c5e4faa214
+CDHash=08d4820a70ab4d831aca2e8eacf6058efa3553ee
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelKBLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsMTLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000GLDriver.bundle/Contents/MacOS/ATIRadeonX5000SCLib.dylib ===
+Identifier=com.apple.ATIRadeonX5000SCLib
+CandidateCDHash sha256=9a9a81f76ae24a38ae3b2735810bc1ad454d0cdd
+CandidateCDHashFull sha256=9a9a81f76ae24a38ae3b2735810bc1ad454d0cddd457c8b3c146e4dcebab637d
+CDHash=9a9a81f76ae24a38ae3b2735810bc1ad454d0cdd
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000GLDriver.bundle/Contents/MacOS/ATIRadeonX5000SCLib.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelICLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsGLDriver ===
+Identifier=com.apple.driver.AppleIntelICLGraphicsGLDriver
+CandidateCDHash sha256=3b1e03c0f0c782b481312b4485df19469d0a50a7
+CandidateCDHashFull sha256=3b1e03c0f0c782b481312b4485df19469d0a50a7013fd4920ef1b967bad66c25
+CDHash=3b1e03c0f0c782b481312b4485df19469d0a50a7
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelICLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsGLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX4000GLDriver.bundle/Contents/MacOS/ATIRadeonX4000SCLib.dylib ===
+Identifier=com.apple.ATIRadeonX4000SCLib
+CandidateCDHash sha256=9971adc93d858424a52346e051c809d9b25ac872
+CandidateCDHashFull sha256=9971adc93d858424a52346e051c809d9b25ac872b2b03d0cfa7982abf03ad5c3
+CDHash=9971adc93d858424a52346e051c809d9b25ac872
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX4000GLDriver.bundle/Contents/MacOS/ATIRadeonX4000SCLib.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelICLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsMTLDriver ===
+Identifier=com.apple.driver.AppleIntelICLGraphicsMTLDriver
+CandidateCDHash sha256=7617de48cca1542174072a1df3ac134ebe63d7dd
+CandidateCDHashFull sha256=7617de48cca1542174072a1df3ac134ebe63d7dd920c2852d94f39953f3099ba
+CDHash=7617de48cca1542174072a1df3ac134ebe63d7dd
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelICLGraphicsMTLDriver.bundle/Contents/MacOS/AppleIntelICLGraphicsMTLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelKBLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsGLDriver ===
+Identifier=com.apple.driver.AppleIntelKBLGraphicsGLDriver
+CandidateCDHash sha256=8cb03b453064a95330618d4bcba291dfa5511200
+CandidateCDHashFull sha256=8cb03b453064a95330618d4bcba291dfa55112005d84c0db77cd330e78b6365f
+CDHash=8cb03b453064a95330618d4bcba291dfa5511200
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AppleIntelKBLGraphicsGLDriver.bundle/Contents/MacOS/AppleIntelKBLGraphicsGLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000Shared.bundle/Contents/MacOS/AMDRadeonX6000Shared ===
+Identifier=com.apple.AMDRadeonX6000Shared
+CandidateCDHash sha256=1a662a5442f24f7b58fb41204a4a8ef54e623375
+CandidateCDHashFull sha256=1a662a5442f24f7b58fb41204a4a8ef54e623375375038f6edf7ed8054bc9f25
+CDHash=1a662a5442f24f7b58fb41204a4a8ef54e623375
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000Shared.bundle/Contents/MacOS/AMDRadeonX6000Shared: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000MTLDriver.bundle/Contents/MacOS/AMDRadeonX5000MTLDriver ===
+Identifier=com.apple.AMDRadeonX5000MTLDriver
+CandidateCDHash sha256=6b3d4d39142c6545dd267f646e673c228ab59ec7
+CandidateCDHashFull sha256=6b3d4d39142c6545dd267f646e673c228ab59ec72ea4bae56f116b0778a4100b
+CDHash=6b3d4d39142c6545dd267f646e673c228ab59ec7
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX5000MTLDriver.bundle/Contents/MacOS/AMDRadeonX5000MTLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000MTLDriver.bundle/Contents/MacOS/AMDRadeonX6000MTLDriver ===
+Identifier=com.apple.AMDRadeonX6000MTLDriver
+CandidateCDHash sha256=4d8c4d4c32f155f28aa423aa3fc60d991f1ca579
+CandidateCDHashFull sha256=4d8c4d4c32f155f28aa423aa3fc60d991f1ca579643a91cf011032180e7463f1
+CDHash=4d8c4d4c32f155f28aa423aa3fc60d991f1ca579
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000MTLDriver.bundle/Contents/MacOS/AMDRadeonX6000MTLDriver: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000GLDriver.bundle/Contents/MacOS/ATIRadeonX6000SCLib.dylib ===
+Identifier=com.apple.ATIRadeonX6000SCLib
+CandidateCDHash sha256=a57c73e28ce07a7251db17786ab91c66ad873bd8
+CandidateCDHashFull sha256=a57c73e28ce07a7251db17786ab91c66ad873bd88532083da03ae1a84f76b634
+CDHash=a57c73e28ce07a7251db17786ab91c66ad873bd8
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDRadeonX6000GLDriver.bundle/Contents/MacOS/ATIRadeonX6000SCLib.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDShared.bundle/Contents/MacOS/AMDShared ===
+Identifier=com.apple.AMDShared
+CandidateCDHash sha256=320b8921e619963bd023273765f447fda0a4ffcb
+CandidateCDHashFull sha256=320b8921e619963bd023273765f447fda0a4ffcb08e6217ddb92f8feec145d9c
+CDHash=320b8921e619963bd023273765f447fda0a4ffcb
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDShared.bundle/Contents/MacOS/AMDShared: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDShared.bundle/Contents/PlugIns/libAMDIL902.dylib ===
+Identifier=com.apple.libAMDIL902
+CandidateCDHash sha256=c4078896ca3382da2f6d0c8cba384c1e04f465cc
+CandidateCDHashFull sha256=c4078896ca3382da2f6d0c8cba384c1e04f465cc98e3b225ba7b58ccf9c483d2
+CDHash=c4078896ca3382da2f6d0c8cba384c1e04f465cc
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Extensions/AMDShared.bundle/Contents/PlugIns/libAMDIL902.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper ===
+Identifier=com.apple.SafariPlatformSupport.Helper
+CandidateCDHash sha256=30906f9d7e849f1b7b3be9d0c2dea88b4537ba9c
+CandidateCDHashFull sha256=30906f9d7e849f1b7b3be9d0c2dea88b4537ba9c8fb3e775c29d09bb2b5c8351
+CDHash=30906f9d7e849f1b7b3be9d0c2dea88b4537ba9c
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/ApplePDPHelper.framework/Versions/A/ApplePDPHelper ===
+Identifier=com.apple.ApplePDPHelper
+CandidateCDHash sha256=dc5176540f9d55f2f0454287eaa37ab62fd9010d
+CandidateCDHashFull sha256=dc5176540f9d55f2f0454287eaa37ab62fd9010d9ade071d76bbdd571a349939
+CDHash=dc5176540f9d55f2f0454287eaa37ab62fd9010d
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/ApplePDPHelper.framework/Versions/A/ApplePDPHelper: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/WebDriver.framework/Versions/A/XPCServices/com.apple.WebDriver.HTTPService.xpc/Contents/MacOS/com.apple.WebDriver.HTTPService ===
+Identifier=com.apple.WebDriver.HTTPService
+CandidateCDHash sha256=a123bb12052138b149e3f36c56e7f4649e639ce2
+CandidateCDHashFull sha256=a123bb12052138b149e3f36c56e7f4649e639ce27dd50e29f97fbb13b637cef8
+CDHash=a123bb12052138b149e3f36c56e7f4649e639ce2
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/WebDriver.framework/Versions/A/XPCServices/com.apple.WebDriver.HTTPService.xpc/Contents/MacOS/com.apple.WebDriver.HTTPService: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/ExclaveFDRDecode.framework/Versions/A/ExclaveFDRDecode ===
+Identifier=com.apple.ExclaveFDRDecodeRawDataStoreKit
+CandidateCDHash sha256=0a12ecc4f3d294f9700a4922b52e11013ef3ea77
+CandidateCDHashFull sha256=0a12ecc4f3d294f9700a4922b52e11013ef3ea777ba94820c28b65e539abcb4a
+CDHash=0a12ecc4f3d294f9700a4922b52e11013ef3ea77
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/ExclaveFDRDecode.framework/Versions/A/ExclaveFDRDecode: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/CredentialProviderExtensionHelper.xpc/Contents/MacOS/CredentialProviderExtensionHelper ===
+Identifier=com.apple.SafariFoundation.CredentialProviderExtensionHelper
+CandidateCDHash sha256=9dde5d9d68115bb8c6f7f9465a006efbdd5d5d19
+CandidateCDHashFull sha256=9dde5d9d68115bb8c6f7f9465a006efbdd5d5d19a7a5bb31c0284d67b98e07b3
+CDHash=9dde5d9d68115bb8c6f7f9465a006efbdd5d5d19
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/CredentialProviderExtensionHelper.xpc/Contents/MacOS/CredentialProviderExtensionHelper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/SafariConfigurationSubscriber.xpc/Contents/MacOS/SafariConfigurationSubscriber ===
+Identifier=com.apple.SafariShared.SafariConfigurationSubscriber
+CandidateCDHash sha256=2495e810162d4a97f303ab06941d4df4a0dda404
+CandidateCDHashFull sha256=2495e810162d4a97f303ab06941d4df4a0dda4047d5dec58eb52182537ecef80
+CDHash=2495e810162d4a97f303ab06941d4df4a0dda404
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/Versions/A/XPCServices/SafariConfigurationSubscriber.xpc/Contents/MacOS/SafariConfigurationSubscriber: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.SearchHelper.xpc/Contents/MacOS/com.apple.Safari.SearchHelper ===
+Identifier=com.apple.Safari.SearchHelper
+CandidateCDHash sha256=fb5cbd19157055a0bd9dbe6050f305da95128f40
+CandidateCDHashFull sha256=fb5cbd19157055a0bd9dbe6050f305da95128f4065af5337a612a4dccb3f1b43
+CDHash=fb5cbd19157055a0bd9dbe6050f305da95128f40
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.SearchHelper.xpc/Contents/MacOS/com.apple.Safari.SearchHelper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.CredentialExtractionHelper.xpc/Contents/MacOS/com.apple.Safari.CredentialExtractionHelper ===
+Identifier=com.apple.Safari.CredentialExtractionHelper
+CandidateCDHash sha256=dfaabdf4fa5ffc64cea5b1c96790f2c9969b7ac2
+CandidateCDHashFull sha256=dfaabdf4fa5ffc64cea5b1c96790f2c9969b7ac215d7fb810486703bd70b8880
+CDHash=dfaabdf4fa5ffc64cea5b1c96790f2c9969b7ac2
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.CredentialExtractionHelper.xpc/Contents/MacOS/com.apple.Safari.CredentialExtractionHelper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/PlugInKitDaemon.framework/Versions/A/PlugInKitDaemon ===
+Identifier=com.apple.pluginkit.PlugInKitDaemon
+CandidateCDHash sha256=983ff116a5a6bbbf725182b9e8703a81f2f0e51d
+CandidateCDHashFull sha256=983ff116a5a6bbbf725182b9e8703a81f2f0e51d8354f6317651de3b9516383b
+CDHash=983ff116a5a6bbbf725182b9e8703a81f2f0e51d
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/PlugInKitDaemon.framework/Versions/A/PlugInKitDaemon: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/HelloWorldMacHelper.framework/Versions/A/HelloWorldMacHelper ===
+Identifier=com.apple.HelloWorldMacHelper
+CandidateCDHash sha256=35d2edcaacdc174e50b06b95b87167518b598bf9
+CandidateCDHashFull sha256=35d2edcaacdc174e50b06b95b87167518b598bf91c5f5623fb5d07d306145401
+CDHash=35d2edcaacdc174e50b06b95b87167518b598bf9
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/PrivateFrameworks/HelloWorldMacHelper.framework/Versions/A/HelloWorldMacHelper: invalid resource directory (directory or signature have been modified)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.ExtensionHelper.xpc/Contents/MacOS/com.apple.SafariServices.ExtensionHelper ===
+Identifier=com.apple.SafariServices.ExtensionHelper
+CandidateCDHash sha256=74a779c439a6a689739d404b4680a655dc5f5a72
+CandidateCDHashFull sha256=74a779c439a6a689739d404b4680a655dc5f5a726d3ace329210d2ac657dd471
+CDHash=74a779c439a6a689739d404b4680a655dc5f5a72
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.ExtensionHelper.xpc/Contents/MacOS/com.apple.SafariServices.ExtensionHelper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.xpc/Contents/MacOS/com.apple.SafariServices ===
+Identifier=com.apple.SafariServices
+CandidateCDHash sha256=b6d84e56fef7359e7a184d7950be888c0796569f
+CandidateCDHashFull sha256=b6d84e56fef7359e7a184d7950be888c0796569f394ffd3c4516056b27e6b4e1
+CDHash=b6d84e56fef7359e7a184d7950be888c0796569f
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/SafariServices.framework/Versions/A/XPCServices/com.apple.SafariServices.xpc/Contents/MacOS/com.apple.SafariServices: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/3425AMD/libLLVMContainer.dylib ===
+Identifier=com.apple.libLLVMContainer
+CandidateCDHash sha256=e50441fbc954e88ccbbf87cc78b0edee0d277dfb
+CandidateCDHashFull sha256=e50441fbc954e88ccbbf87cc78b0edee0d277dfbd23162b29277ce337903a9c3
+CDHash=e50441fbc954e88ccbbf87cc78b0edee0d277dfb
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/3425AMD/libLLVMContainer.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking ===
+Identifier=com.apple.WebKit.Networking
+CandidateCDHash sha256=274213e512b6ebab8c35a99be5fc40fbf630f4e8
+CandidateCDHashFull sha256=274213e512b6ebab8c35a99be5fc40fbf630f4e8111f986f1beeb52dbbd209a3
+CDHash=274213e512b6ebab8c35a99be5fc40fbf630f4e8
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal ===
+Identifier=com.apple.WebKit.WebContent.CaptivePortal
+CandidateCDHash sha256=8abd2cbc77dc4ce4f792d5d44b55eb9f1147e515
+CandidateCDHashFull sha256=8abd2cbc77dc4ce4f792d5d44b55eb9f1147e51552c145283fcef1fa3205171e
+CDHash=8abd2cbc77dc4ce4f792d5d44b55eb9f1147e515
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.CaptivePortal.xpc/Contents/MacOS/com.apple.WebKit.WebContent.CaptivePortal: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent ===
+Identifier=com.apple.WebKit.WebContent
+CandidateCDHash sha256=5c201f08c8d7ffb9d9bc9723c0a0a43e9492476c
+CandidateCDHashFull sha256=5c201f08c8d7ffb9d9bc9723c0a0a43e9492476ce6e85c43f56582b2db99a91c
+CDHash=5c201f08c8d7ffb9d9bc9723c0a0a43e9492476c
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development ===
+Identifier=com.apple.WebKit.WebContent.Development
+CandidateCDHash sha256=ad43ebcff308b6cf58a9598ba82acb77029be841
+CandidateCDHashFull sha256=ad43ebcff308b6cf58a9598ba82acb77029be841f31a0d3e431ca01a2e993dd1
+CDHash=ad43ebcff308b6cf58a9598ba82acb77029be841
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.Development.xpc/Contents/MacOS/com.apple.WebKit.WebContent.Development: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU ===
+Identifier=com.apple.WebKit.GPU
+CandidateCDHash sha256=ddb3e23f9c175f64ac91907450b51ed0ed58d9fe
+CandidateCDHashFull sha256=ddb3e23f9c175f64ac91907450b51ed0ed58d9fe58cf9d1e9245cddbc32b3f1e
+CDHash=ddb3e23f9c175f64ac91907450b51ed0ed58d9fe
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.GPU.xpc/Contents/MacOS/com.apple.WebKit.GPU: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/3425AMD/libcl2module.dylib ===
+Identifier=com.apple.libcl2module
+CandidateCDHash sha256=a8c7a7990f634a5512281222b9b16e0adb198439
+CandidateCDHashFull sha256=a8c7a7990f634a5512281222b9b16e0adb198439c43957d5bda6942290ceca1d
+CDHash=a8c7a7990f634a5512281222b9b16e0adb198439
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/3425AMD/libcl2module.dylib: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/AuthenticationServices.framework/Versions/A/XPCServices/com.apple.AuthenticationServices.Helper.xpc/Contents/MacOS/com.apple.AuthenticationServices.Helper ===
+Identifier=com.apple.AuthenticationServices.Helper
+CandidateCDHash sha256=a6326f8055a3ecd245cbbbbbd69c4731ca16ad8f
+CandidateCDHashFull sha256=a6326f8055a3ecd245cbbbbbd69c4731ca16ad8f8fd223f67e5da340177b1bb9
+CDHash=a6326f8055a3ecd245cbbbbbd69c4731ca16ad8f
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/AuthenticationServices.framework/Versions/A/XPCServices/com.apple.AuthenticationServices.Helper.xpc/Contents/MacOS/com.apple.AuthenticationServices.Helper: rejected (resource envelope is obsolete (custom omit rules))
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc ===
+Identifier=com.apple.jsc
+CandidateCDHash sha256=eab9640f935106d99479ead6e937363fcf4381d0
+CandidateCDHashFull sha256=eab9640f935106d99479ead6e937363fcf4381d02c1c31a5f7c1376b76173bf7
+CDHash=eab9640f935106d99479ead6e937363fcf4381d0
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.atlas ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.atlas: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.symbols ===
+Identifier=com.apple.dyld.cache.arm64e.development
+CandidateCDHash sha256=73052e08807310ec87b588fac754e0098ba81cee
+CandidateCDHashFull sha256=73052e08807310ec87b588fac754e0098ba81ceece9db23e755e9b7c23bc8418
+CDHash=73052e08807310ec87b588fac754e0098ba81cee
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.symbols: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.symbols ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=0f83768b8ab56122cbc8ef0293f9a249fbad8d25
+CandidateCDHashFull sha256=0f83768b8ab56122cbc8ef0293f9a249fbad8d252978fa737621433e0d50e470
+CDHash=0f83768b8ab56122cbc8ef0293f9a249fbad8d25
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64.symbols: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.atlas ===
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e.atlas: rejected
+source=no usable signature
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e ===
+Identifier=com.apple.dyld.cache.arm64e.development
+CandidateCDHash sha256=fa13d468cab8552d95e5c3b4df302d5b202d6169
+CandidateCDHashFull sha256=fa13d468cab8552d95e5c3b4df302d5b202d61691950acec619a97f606004ae2
+CDHash=fa13d468cab8552d95e5c3b4df302d5b202d6169
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_arm64e: rejected (the code is valid but does not seem to be an app)
+
+=== /System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64 ===
+Identifier=com.apple.dyld.cache.x86_64.development
+CandidateCDHash sha256=c06d0e63018a6b11c7cc2b037f4bc8a6a95c6132
+CandidateCDHashFull sha256=c06d0e63018a6b11c7cc2b037f4bc8a6a95c613224982d27e777d4a7616373ca
+CDHash=c06d0e63018a6b11c7cc2b037f4bc8a6a95c6132
+TeamIdentifier=not set
+/System/Volumes/Preboot/Cryptexes/Incoming/OS/System/DriverKit/System/Library/dyld/dyld_shared_cache_x86_64: rejected (the code is valid but does not seem to be an app)
+
+avespoli@Anthonys-MacBook-Pro ~ % 

@@ -1,0 +1,2 @@
+a2688e8207961c66a6daa7d3c034b1e70e0d2edd43228d9a4d77f7f6fea1102a  /Users/avespoli/mitm_evidence/BCMWLANFirmware4388_Hashstore.kext/Contents/Info.plist
+df2409172886c74121f1d69332efc749015abb2bb6e50826c74d4d1ce1046867  /Users/avespoli/mitm_evidence/BCMWLANFirmware4388_Hashstore.kext/Contents/version.plist
